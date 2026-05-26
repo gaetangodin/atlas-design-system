@@ -650,3 +650,25 @@ export type {
 
 // Group C — Page-suffixed templates (thin wrappers over Route shells).
 export * from "./components/NamedPages";
+
+// ─────────────────────────────────────────────────────────────────────
+// v0.5 import — full sweep of remaining Xeekrs src/components/ subfolders
+// ─────────────────────────────────────────────────────────────────────
+
+export * from "./components/AnnouncementsExtras";
+export * from "./components/CandidatesExtras";
+export * from "./components/CxFeedPatterns";
+export * from "./components/EmployersExtras";
+export * from "./components/BrandIcons";
+export * from "./components/IncentivesExtras";
+export * from "./components/InterviewsExtras";
+export * from "./components/MarketplaceExtras";
+export * from "./components/JobPostingExtras";
+export * from "./components/OnboardingPatterns";
+export * from "./components/AccountPatterns";
+export * from "./components/RecruitmentOverview";
+export * from "./components/ProfileTabsShell";
+export * from "./components/RecruitmentWalkthrough";
+export * from "./components/ShareOpportunityDialog";
+export * from "./components/CommandPalette";
+export * from "./components/UiPrimitivesExtra";

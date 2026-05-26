@@ -1,6 +1,6 @@
 {
-  "componentCount": 152,
-  "totalExports": 586,
+  "componentCount": 172,
+  "totalExports": 856,
   "components": [
     {
       "folder": "AcademyPatterns",
@@ -44,6 +44,33 @@
       "types": [
         "AccountMenuProps",
         "AccountMenuItem"
+      ]
+    },
+    {
+      "folder": "AccountPatterns",
+      "components": [
+        "AccountSettingsShell",
+        "AccountContributionsSection",
+        "AccountOrganizationsSection",
+        "AccountSiteMapSection",
+        "AccountWorkspacesSection",
+        "AccountProfilePreferencesShell",
+        "BrowsePageShell",
+        "HomePageShell",
+        "HelpDeskSubpageShell",
+        "JobPostingsTableShell",
+        "OrganizationRequestFloatingCard"
+      ],
+      "types": [
+        "AccountSettingsNavItem",
+        "AccountSettingsShellProps",
+        "AccountSectionProps",
+        "AccountProfilePreferencesShellProps",
+        "BrowsePageShellProps",
+        "HomePageShellProps",
+        "HelpDeskSubpageShellProps",
+        "JobPostingsTableShellProps",
+        "OrganizationRequestFloatingCardProps"
       ]
     },
     {
@@ -120,6 +147,23 @@
       ],
       "types": [
         "AlertModalProps"
+      ]
+    },
+    {
+      "folder": "AnnouncementsExtras",
+      "components": [
+        "AnnouncementAlertBar",
+        "InlineNotificationBanners",
+        "MobileAlertModals",
+        "PromotionPostcardModal"
+      ],
+      "types": [
+        "AnnouncementAlertTone",
+        "AnnouncementAlertBarProps",
+        "InlineNotice",
+        "InlineNotificationBannersProps",
+        "MobileAlertModalsProps",
+        "PromotionPostcardModalProps"
       ]
     },
     {
@@ -280,6 +324,18 @@
       ]
     },
     {
+      "folder": "BrandIcons",
+      "components": [
+        "LinkedInSolidIcon",
+        "XeekrsMark",
+        "BrandIconButton"
+      ],
+      "types": [
+        "BrandIconProps",
+        "BrandIconButtonProps"
+      ]
+    },
+    {
       "folder": "BrandLogo",
       "components": [
         "BrandLogo"
@@ -361,6 +417,20 @@
         "DateRangePickerProps",
         "DateInputProps",
         "TimeInputProps"
+      ]
+    },
+    {
+      "folder": "CandidatesExtras",
+      "components": [
+        "ContactCardPreview",
+        "CandidateSearchFilters",
+        "InfiniteScrollSentinel"
+      ],
+      "types": [
+        "ContactCardPreviewProps",
+        "CandidateSearchFilter",
+        "CandidateSearchFiltersProps",
+        "InfiniteScrollSentinelProps"
       ]
     },
     {
@@ -492,6 +562,16 @@
       ]
     },
     {
+      "folder": "CommandPalette",
+      "components": [
+        "CommandPalette"
+      ],
+      "types": [
+        "CommandItem",
+        "CommandPaletteProps"
+      ]
+    },
+    {
       "folder": "ConsentAlertBar",
       "components": [
         "ConsentAlertBar"
@@ -537,6 +617,16 @@
       ],
       "types": [
         "CreateProjectWizardProps"
+      ]
+    },
+    {
+      "folder": "CxFeedPatterns",
+      "components": [
+        "CampaignsPanel"
+      ],
+      "types": [
+        "CampaignsPanelEntry",
+        "CampaignsPanelProps"
       ]
     },
     {
@@ -634,6 +724,19 @@
       "types": [
         "DropdownProps",
         "DropdownMenuProps"
+      ]
+    },
+    {
+      "folder": "EmployersExtras",
+      "components": [
+        "EmployerCaseloadShareBookmarkToolbar",
+        "EmployerIdentityCard",
+        "PublicEmployerProfileShell"
+      ],
+      "types": [
+        "EmployerCaseloadShareBookmarkToolbarProps",
+        "EmployerIdentityCardProps",
+        "PublicEmployerProfileShellProps"
       ]
     },
     {
@@ -774,6 +877,16 @@
       ]
     },
     {
+      "folder": "IncentivesExtras",
+      "components": [
+        "IncentiveTierAssignCard"
+      ],
+      "types": [
+        "IncentiveTierTone",
+        "IncentiveTierAssignCardProps"
+      ]
+    },
+    {
       "folder": "InlineAiAssist",
       "components": [
         "InlineAiAssist"
@@ -823,12 +936,39 @@
       ]
     },
     {
+      "folder": "InterviewsExtras",
+      "components": [
+        "BookingModal",
+        "WorkInterviewsViewShell"
+      ],
+      "types": [
+        "BookingModalProps",
+        "WorkInterviewsViewShellProps"
+      ]
+    },
+    {
       "folder": "IntroVideoDialog",
       "components": [
         "IntroVideoDialog"
       ],
       "types": [
         "IntroVideoDialogProps"
+      ]
+    },
+    {
+      "folder": "JobPostingExtras",
+      "components": [
+        "DisclosurePlainMessageBar",
+        "JobPostingAiAssist",
+        "JobPostingWizardSidebar"
+      ],
+      "types": [
+        "DisclosurePlainMessageBarProps",
+        "JobPostingAiAssistSuggestion",
+        "JobPostingAiAssistProps",
+        "WizardSidebarStatus",
+        "JobPostingWizardSidebarStep",
+        "JobPostingWizardSidebarProps"
       ]
     },
     {
@@ -866,6 +1006,15 @@
         "DisplayAdTemplateProps",
         "CampaignSetProps",
         "CampaignTile"
+      ]
+    },
+    {
+      "folder": "MarketplaceExtras",
+      "components": [
+        "MarketplaceCatalogueJobTextCard"
+      ],
+      "types": [
+        "MarketplaceCatalogueJobTextCardProps"
       ]
     },
     {
@@ -1026,6 +1175,80 @@
       ]
     },
     {
+      "folder": "NamedPages",
+      "components": [
+        "AccountPage",
+        "JobBoardPage",
+        "JobListingsPage",
+        "ProgramsPage",
+        "ProgramsView",
+        "ProjectsPage",
+        "ProjectsView",
+        "ReportsPage",
+        "ReportsView",
+        "TasksPage",
+        "WorkspacePage",
+        "MyLearnersPage",
+        "PeoplePage",
+        "PeopleView",
+        "ApplicantsView",
+        "SearchView",
+        "MessagesWorkspacePage",
+        "CareerProfilesPage",
+        "NewPostingPage",
+        "LearnerProfile",
+        "LearnerProfilePage",
+        "CareerProgressPage",
+        "ProjectFilesView",
+        "ProjectPlanView",
+        "ProjectOverview",
+        "MobileNotifications",
+        "MobileToolkit"
+      ],
+      "types": []
+    },
+    {
+      "folder": "NamedRoutes",
+      "components": [
+        "AcademyDashboardRoute",
+        "AnalyticsRoute",
+        "AnnouncementsBoardRoute",
+        "AnnouncementsListRoute",
+        "CandidatesRoute",
+        "CaseloadOverviewRoute",
+        "CaseloadEmployersRoute",
+        "CaseloadEmployersStageRoute",
+        "CaseloadTeamRoute",
+        "CxFeedRoute",
+        "HelpDeskRoute",
+        "HelpDeskLearningRoute",
+        "HelpDeskSupportRoute",
+        "IncentivesManageRoute",
+        "IncentiveTiersListRoute",
+        "RewardsRoute",
+        "InterviewsRoute",
+        "JobMatchesRoute",
+        "JobPostingsIndexRoute",
+        "JobProcurementRoute",
+        "MarketplaceCatalogueRoute",
+        "ReferralNetworkRoute",
+        "SupportNetworkRoute",
+        "MessagesWorkspaceRoute",
+        "CareerProfilesRoute",
+        "AnnouncementEditorRoute",
+        "NewPostingRoute",
+        "ResumeBuilderRoute",
+        "AnnouncementDetailRoute",
+        "EmployerProfileRoute",
+        "CareerHubDashboardRoute",
+        "CareerProgressRoute",
+        "MobileMessagesRoute",
+        "MobileNotificationsRoute",
+        "MobileToolkitRoute"
+      ],
+      "types": []
+    },
+    {
       "folder": "Navbar",
       "components": [
         "Navbar",
@@ -1065,6 +1288,38 @@
       ],
       "types": [
         "NumberInputProps"
+      ]
+    },
+    {
+      "folder": "OnboardingPatterns",
+      "components": [
+        "WelcomeFlowShell",
+        "PostcardShell",
+        "RoleSelectStep",
+        "WelcomeIconRadiogroup",
+        "JobSeekerSteps",
+        "EmployerSteps",
+        "EmployerVerificationsPanel",
+        "InviteUsersScreen",
+        "PasswordRegistrationScreen",
+        "EmployerReferralLanding"
+      ],
+      "types": [
+        "WelcomeFlowShellProps",
+        "PostcardShellProps",
+        "RoleSelectOption",
+        "RoleSelectStepProps",
+        "WelcomeIconRadiogroupOption",
+        "WelcomeIconRadiogroupProps",
+        "OnboardingStepStatus",
+        "OnboardingStep",
+        "OnboardingStepsProps",
+        "VerificationStatus",
+        "VerificationItem",
+        "EmployerVerificationsPanelProps",
+        "InviteUsersScreenProps",
+        "PasswordRegistrationScreenProps",
+        "EmployerReferralLandingProps"
       ]
     },
     {
@@ -1179,6 +1434,26 @@
       ]
     },
     {
+      "folder": "ProfileTabsShell",
+      "components": [
+        "ProfileTabsShell",
+        "ProfileTabSection",
+        "ProfileOverviewTab",
+        "ProfileNotesTab",
+        "ProfileRecruitmentTab",
+        "ProfilePlacementsTab",
+        "ProfileDirectoryTab",
+        "ProfileCandidatesTab",
+        "ProfileJobsTab",
+        "ProfileCaseTasksTab"
+      ],
+      "types": [
+        "ProfileTab",
+        "ProfileTabsShellProps",
+        "ProfileTabSectionProps"
+      ]
+    },
+    {
       "folder": "Progress",
       "components": [
         "Progress",
@@ -1242,6 +1517,98 @@
       ]
     },
     {
+      "folder": "RecruitmentExtras",
+      "components": [
+        "RecruitmentAreaTabs",
+        "RecruitmentWorkspaceDestinationCards",
+        "TalentSupplyRadar",
+        "TasksTable",
+        "TaskDrilldownPanel",
+        "ProjectDrilldownPanel",
+        "ProjectProgramChannelPanel",
+        "WorkAreaSubnav",
+        "WorkAreaSubnavTrailing",
+        "WorkBusinessSiteEmptyState",
+        "WorkDashboard",
+        "SkillGapBridgingItem",
+        "PerformanceExecutiveSummarySuggestions",
+        "XeekrsHeaderLogo",
+        "ReferralsHubMark",
+        "JobPostingCreationFlow",
+        "JobPostingForm",
+        "JobPostingSettingsDashboard",
+        "JobPostingQualityTab",
+        "JobPostingDisclosurePublicPreview",
+        "EmployerPendingApprovalBar",
+        "EmployerOnboardingLocationStep",
+        "ApplicationStatusModal"
+      ],
+      "types": [
+        "RecruitmentAreaTabsProps",
+        "DestinationCard",
+        "RecruitmentWorkspaceDestinationCardsProps",
+        "TalentSupplyRadarProps",
+        "TaskRow",
+        "TasksTableProps",
+        "TaskDrilldownPanelProps",
+        "ProjectDrilldownPanelProps",
+        "ProjectProgramChannelPanelProps",
+        "WorkAreaSubnavProps",
+        "WorkAreaSubnavTrailingProps",
+        "WorkBusinessSiteEmptyStateProps",
+        "WorkDashboardProps",
+        "SkillGapBridgingItemProps",
+        "ExecutiveSuggestion",
+        "PerformanceExecutiveSummarySuggestionsProps",
+        "JobPostingCreationFlowProps",
+        "JobPostingFormProps",
+        "JobPostingSettingsDashboardProps",
+        "JobPostingQualityTabProps",
+        "JobPostingDisclosurePublicPreviewProps",
+        "EmployerPendingApprovalBarProps",
+        "EmployerOnboardingLocationStepProps",
+        "ApplicationStatusModalProps"
+      ]
+    },
+    {
+      "folder": "RecruitmentOverview",
+      "components": [
+        "RecruitmentOverviewDashboard",
+        "OverviewHeaderStrip",
+        "OverviewStatCards",
+        "ActiveJobsCard",
+        "CandidatePipelineFunnelCard",
+        "InsightsTipsStrip",
+        "JobPerformanceCard",
+        "MessagesCard",
+        "OnboardingChecklistCard",
+        "RecentCandidateActivityCard",
+        "RecommendedCandidatesCard"
+      ],
+      "types": [
+        "RecruitmentOverviewDashboardProps",
+        "OverviewHeaderStripProps",
+        "OverviewStatTile",
+        "OverviewStatCardsProps",
+        "ActiveJobRow",
+        "ActiveJobsCardProps",
+        "PipelineStageDatum",
+        "CandidatePipelineFunnelCardProps",
+        "InsightTip",
+        "InsightsTipsStripProps",
+        "JobPerformanceMetric",
+        "JobPerformanceCardProps",
+        "MessagesCardRow",
+        "MessagesCardProps",
+        "OnboardingChecklistItem",
+        "OnboardingChecklistCardProps",
+        "RecentCandidateActivityRow",
+        "RecentCandidateActivityCardProps",
+        "RecommendedCandidate",
+        "RecommendedCandidatesCardProps"
+      ]
+    },
+    {
       "folder": "RecruitmentRecaps",
       "components": [
         "InterviewEventRecap",
@@ -1252,6 +1619,16 @@
         "InterviewEventRecapProps",
         "ApplicantReviewRecapProps",
         "ShareCandidatePreviewCardProps"
+      ]
+    },
+    {
+      "folder": "RecruitmentWalkthrough",
+      "components": [
+        "RecruitmentWalkthrough"
+      ],
+      "types": [
+        "WalkthroughStep",
+        "RecruitmentWalkthroughProps"
       ]
     },
     {
@@ -1308,6 +1685,15 @@
       ],
       "types": [
         "SettingsLayoutProps"
+      ]
+    },
+    {
+      "folder": "ShareOpportunityDialog",
+      "components": [
+        "ShareOpportunityDialog"
+      ],
+      "types": [
+        "ShareOpportunityDialogProps"
       ]
     },
     {
@@ -1597,6 +1983,28 @@
       "types": [
         "TypographyScaleProps",
         "TypographyScaleVariant"
+      ]
+    },
+    {
+      "folder": "UiPrimitivesExtra",
+      "components": [
+        "Separator",
+        "ScrollArea",
+        "HoverCard",
+        "ContextMenu",
+        "NavigationMenu",
+        "CaseloadShellTabs"
+      ],
+      "types": [
+        "SeparatorProps",
+        "ScrollAreaProps",
+        "HoverCardProps",
+        "ContextMenuItem",
+        "ContextMenuProps",
+        "NavigationMenuItem",
+        "NavigationMenuProps",
+        "CaseloadShellTab",
+        "CaseloadShellTabsProps"
       ]
     },
     {

@@ -7,6 +7,83 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.5.0] — 2026-05-26
+
+### Added — full close-out of remaining Xeekrs `src/components/` subfolders
+
+After v0.4 finished off top-level `*.tsx` files in
+`Xeekrsmainapp/src/components/`, v0.5 walks every subfolder and lands
+the remaining domain compositions, page shells, and ui/ primitives.
+
+**Announcements / Candidates / CX feed.**
+`AnnouncementsExtras` adds `AnnouncementAlertBar`,
+`InlineNotificationBanners`, `MobileAlertModals`,
+`PromotionPostcardModal`. `CandidatesExtras` adds `ContactCardPreview`,
+`CandidateSearchFilters`, `InfiniteScrollSentinel` (generic
+IntersectionObserver-based sentinel). `CxFeedPatterns` adds
+`CampaignsPanel`.
+
+**Employers / Icons / Incentives / Interviews / Marketplace / Job posting.**
+`EmployersExtras` adds `EmployerCaseloadShareBookmarkToolbar`,
+`EmployerIdentityCard`, `PublicEmployerProfileShell`. `BrandIcons` adds
+`LinkedInSolidIcon`, `XeekrsMark`, `BrandIconButton`. `IncentivesExtras`
+adds `IncentiveTierAssignCard` (with bronze/silver/gold/platinum
+tones). `InterviewsExtras` adds `BookingModal`,
+`WorkInterviewsViewShell`. `MarketplaceExtras` adds
+`MarketplaceCatalogueJobTextCard`. `JobPostingExtras` adds
+`DisclosurePlainMessageBar`, `JobPostingAiAssist`,
+`JobPostingWizardSidebar`.
+
+**Onboarding (10 shells).** `OnboardingPatterns` adds `WelcomeFlowShell`,
+`PostcardShell`, `RoleSelectStep`, `WelcomeIconRadiogroup`,
+`JobSeekerSteps`, `EmployerSteps`, `EmployerVerificationsPanel`,
+`InviteUsersScreen`, `PasswordRegistrationScreen`,
+`EmployerReferralLanding`.
+
+**Account / Pages / Browse / Home.** `AccountPatterns` adds
+`AccountSettingsShell`, four `Account*Section` shells,
+`AccountProfilePreferencesShell`, `BrowsePageShell`, `HomePageShell`,
+`HelpDeskSubpageShell`, `JobPostingsTableShell`,
+`OrganizationRequestFloatingCard`.
+
+**Recruitment overview dashboard (10 surfaces).**
+`RecruitmentOverview` adds `RecruitmentOverviewDashboard` shell plus
+`OverviewHeaderStrip`, `OverviewStatCards`, `ActiveJobsCard`,
+`CandidatePipelineFunnelCard` (with horizontal bar viz),
+`InsightsTipsStrip`, `JobPerformanceCard`, `MessagesCard`,
+`OnboardingChecklistCard`, `RecentCandidateActivityCard`,
+`RecommendedCandidatesCard`.
+
+**Profile tabs / Walkthrough / Share.** `ProfileTabsShell` consolidates
+the Xeekrs employer-profile and job-seeker-3-profile tab patterns into
+a single slot-based shell with `ProfileTabSection` and named aliases
+(`ProfileOverviewTab`, `ProfileNotesTab`, `ProfileRecruitmentTab`,
+`ProfilePlacementsTab`, `ProfileDirectoryTab`, `ProfileCandidatesTab`,
+`ProfileJobsTab`, `ProfileCaseTasksTab`). `RecruitmentWalkthrough`
+adds a guided coach-mark / spotlight tour card.
+`ShareOpportunityDialog` adds a slot-based share modal.
+
+**Remaining UI primitives.** `CommandPalette` adds a ⌘K-style command
+palette on Atlas's `Modal` shell with keyboard nav.
+`UiPrimitivesExtra` adds `Separator`, `ScrollArea`, `HoverCard`,
+`ContextMenu` (right-click activated), `NavigationMenu` (with submenu
+slot), `CaseloadShellTabs`.
+
+**Intentionally not ported.** The Xeekrs `DesignSystemAuditSection`,
+`SettingsBacklogGalleryPreviews`, `SettingsColorTokensPanel`,
+`SettingsComponentGallery`, `SettingsComponentInventoryPanel`,
+`SettingsPagePatternsGallery`, `SettingsProductPatternsGallery`,
+`SettingsRedundancyPanel`, `SettingsShellGalleryPreviews`,
+`OverlayPreviewRoute` files are internal docs / preview pages for the
+Xeekrs sandbox's own UI-library viewer and don't belong in the library
+surface. `route-map.ts`, `sidebar-space-menus.tsx`, `recruitment-walkthrough-steps.ts`,
+all `*-fixtures.ts`, `*-constants.ts`, `*-styles.ts`, `*-helpers.tsx`
+files contain app-specific routing/data/styles and remain in the
+Xeekrs repo.
+
+`tsc --noEmit` on the new surface is clean (only pre-existing
+BottomSheet TS2742 type-portability warnings remain, unrelated).
+
 ## [0.4.0] — 2026-05-26
 
 ### Added — Groups A, B, C: full Xeekrs `src/components/` import

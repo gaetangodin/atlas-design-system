@@ -72,14 +72,60 @@ for (const raw of source.split("\n")) {
 const components = new Map();
 for (const stmt of merged) {
   const parsed = parseExportLine(stmt);
-  if (!parsed) continue;
-  const { folder, isType, identifiers } = parsed;
+  if (parsed) {
+    const { folder, isType, identifiers } = parsed;
+    if (!components.has(folder)) {
+      components.set(folder, { folder, components: [], types: [] });
+    }
+    const entry = components.get(folder);
+    for (const ident of identifiers) {
+      (isType ? entry.types : entry.components).push(ident.exported);
+    }
+    continue;
+  }
+  // Handle `export * from "./components/X"` — count the folder as a
+  // component surface and walk its index to harvest identifiers.
+  const starM = /export\s+\*\s+from\s+"\.\/components\/([^"]+)"/.exec(stmt);
+  if (!starM) continue;
+  const folder = starM[1].split("/")[0];
   if (!components.has(folder)) {
     components.set(folder, { folder, components: [], types: [] });
   }
   const entry = components.get(folder);
-  for (const ident of identifiers) {
-    (isType ? entry.types : entry.components).push(ident.exported);
+  const indexPath = resolve(root, "src/api/components", folder, "index.ts");
+  let indexSource = "";
+  try { indexSource = readFileSync(indexPath, "utf8"); } catch { /* no-op */ }
+  // Also try the underlying TSX of the same name if index just barrel-stars.
+  if (indexSource.includes(`export * from "./${folder}";`)) {
+    try {
+      indexSource += "\n" + readFileSync(
+        resolve(root, "src/api/components", folder, `${folder}.tsx`),
+        "utf8",
+      );
+    } catch { /* no-op */ }
+  }
+  const valueRx = /export\s+(?:function|const|class)\s+(\w+)/g;
+  const typeRx = /export\s+(?:interface|type)\s+(\w+)/g;
+  let mm;
+  while ((mm = valueRx.exec(indexSource))) entry.components.push(mm[1]);
+  while ((mm = typeRx.exec(indexSource))) entry.types.push(mm[1]);
+  // Plus named re-exports / aliases in the index.
+  const reNamed = /export\s+\{([^}]+)\}\s+from/g;
+  while ((mm = reNamed.exec(indexSource))) {
+    for (const piece of mm[1].split(",").map((s) => s.trim()).filter(Boolean)) {
+      const asM = /^(\w+)\s+as\s+(\w+)$/.exec(piece);
+      const name = asM ? asM[2] : piece;
+      if (!entry.components.includes(name) && !entry.types.includes(name)) {
+        entry.components.push(name);
+      }
+    }
+  }
+  // `export const Foo = Bar` aliases.
+  const aliasRx = /export\s+const\s+(\w+)\s*=/g;
+  while ((mm = aliasRx.exec(indexSource))) {
+    if (!entry.components.includes(mm[1]) && !entry.types.includes(mm[1])) {
+      entry.components.push(mm[1]);
+    }
   }
 }
 

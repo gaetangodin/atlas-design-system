@@ -420,13 +420,50 @@ where they belong.
 
 ---
 
+## v0.5 — Close-out of remaining `src/components/` subfolders
+
+| Status | Xeekrs subfolder / item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | `announcements/` (4 items) | `components/AnnouncementsExtras` | AnnouncementAlertBar, InlineNotificationBanners, MobileAlertModals, PromotionPostcardModal. |
+| 🟢 NEW | `candidates/` extras (3 items) | `components/CandidatesExtras` | ContactCardPreview, CandidateSearchFilters, InfiniteScrollSentinel (generic IntersectionObserver). |
+| 🟢 NEW | `cx-feed/CampaignsPanel` | `components/CxFeedPatterns` | |
+| 🟢 NEW | `employers/` (3 items) | `components/EmployersExtras` | EmployerCaseloadShareBookmarkToolbar, EmployerIdentityCard, PublicEmployerProfileShell. |
+| 🟢 NEW | `icons/` (2 marks) + helper | `components/BrandIcons` | LinkedInSolidIcon, XeekrsMark, BrandIconButton. |
+| 🟢 NEW | `incentives/IncentiveTierAssignCard` | `components/IncentivesExtras` | Bronze/silver/gold/platinum/neutral tones. |
+| 🟢 NEW | `interviews/` (2 items) | `components/InterviewsExtras` | BookingModal, WorkInterviewsViewShell. |
+| 🟢 NEW | `marketplace/MarketplaceCatalogueJobTextCard` | `components/MarketplaceExtras` | |
+| 🟢 NEW | `job-posting/` extras (3 items) | `components/JobPostingExtras` | DisclosurePlainMessageBar, JobPostingAiAssist, JobPostingWizardSidebar. |
+| 🟢 NEW | `onboarding/welcome/` (10 shells) | `components/OnboardingPatterns` | WelcomeFlowShell, PostcardShell, RoleSelectStep, WelcomeIconRadiogroup, JobSeekerSteps, EmployerSteps, EmployerVerificationsPanel, InviteUsersScreen, PasswordRegistrationScreen, EmployerReferralLanding. |
+| 🟢 NEW | `pages/` account + page shells (11 items) | `components/AccountPatterns` | AccountSettingsShell, 4 Account*Section shells (Contributions / Organizations / SiteMap / Workspaces), AccountProfilePreferencesShell, BrowsePageShell, HomePageShell, HelpDeskSubpageShell, JobPostingsTableShell, OrganizationRequestFloatingCard. |
+| 🟢 NEW | `pages/recruitment-overview/` (10 surfaces) | `components/RecruitmentOverview` | RecruitmentOverviewDashboard + 9 tiles (OverviewHeaderStrip, OverviewStatCards, ActiveJobsCard, CandidatePipelineFunnelCard, InsightsTipsStrip, JobPerformanceCard, MessagesCard, OnboardingChecklistCard, RecentCandidateActivityCard, RecommendedCandidatesCard). |
+| 🟢 NEW | `pages/employer-profile/` + `pages/job-seeker-3-profile/` (16 tab files) | `components/ProfileTabsShell` | Consolidated into `ProfileTabsShell` + `ProfileTabSection`, with Xeekrs tab-file names re-exported as aliases (ProfileOverviewTab, ProfileNotesTab, ProfileRecruitmentTab, ProfilePlacementsTab, ProfileDirectoryTab, ProfileCandidatesTab, ProfileJobsTab, ProfileCaseTasksTab). |
+| 🟢 NEW | `recruitment/RecruitmentWalkthrough` | `components/RecruitmentWalkthrough` | Coach-mark / spotlight tour card. |
+| 🟢 NEW | `share/ShareOpportunityDialog` | `components/ShareOpportunityDialog` | |
+| 🟢 NEW | `ui/command` (⌘K palette) | `components/CommandPalette` | Built on Atlas's `Modal`. |
+| 🟢 NEW | `ui/` extras (6 items) | `components/UiPrimitivesExtra` | Separator, ScrollArea, HoverCard, ContextMenu, NavigationMenu, CaseloadShellTabs. |
+
+### Intentionally not ported in v0.5
+
+| Status | Xeekrs item | Reason |
+|---|---|---|
+| ⚪ SKIP | `pages/DesignSystemAuditSection`, `DesignSystemPortalLanding`, all `Settings*` gallery/panel files | Internal Xeekrs sandbox UI-library viewer pages — not library surface. |
+| ⚪ SKIP | `pages/AcademyDashboardRoute`, `AnalyticsRoute`, `CandidatesRoute`, etc. (~30 Route files) | Already exported as named Routes in v0.3 `NamedRoutes`. |
+| ⚪ SKIP | `pages/HomePage.tsx`, `BrowsePage.tsx`, `JobPostingsTable.tsx`, `OrganizationRequestFloatingCard.tsx`, account section files | Logic reimplemented as slot-based shells in `AccountPatterns`. The Xeekrs originals carry app-specific data/state that doesn't belong in a library. |
+| ⚪ SKIP | `overlays/OverlayPreviewRoute`, `figma/`, `route-map.ts`, `sidebar-space-menus.tsx`, `recruitment-walkthrough-steps.ts` | App-internal routing / data / preview surfaces. |
+| ⚪ SKIP | All `*-fixtures.ts`, `*-constants.ts`, `*-styles.ts`, `*-helpers.tsx`, `caseload-shell-tabs.tsx` (variants) | Internal helpers / data files. |
+| ⚪ SKIP | Existing `ui/` primitives already covered by Atlas (button, card, badge, alert-dialog → `AlertModal`, sheet → `Drawer`, drawer, dialog → `Modal`, etc.) | No-op. |
+
+---
+
 ## Final state
 
-Atlas surface: **160+ component folders / 530+ exports** (was 87
-pre-migration; 117 after v0.2; 138 after v0.3). All categories on the
-Xeekrs UI library page **and** every file in
-`Xeekrsmainapp/src/components/` (except pure internal-docs files) are
-now represented. Component inventory snapshot lives at
+Atlas surface after v0.5: **170+ component folders / 640+ exports** (was 87
+pre-migration; 117 after v0.2; 138 after v0.3; 152 after v0.4). Every
+file in `Xeekrsmainapp/src/components/` — at every depth — that
+represents library-worthy UI is now in Atlas, either as a direct port,
+a slot-based shell, or a renamed alias. App-specific data, fixtures,
+internal-tooling pages, and sandbox-viewer surfaces remain in the
+Xeekrs repo. Component inventory snapshot at
 `docs/COMPONENT-INVENTORY.json` (regenerable via
 `npm run docs:inventory`; CI fails on drift). Manifest is the source
 of truth for every ported item.
