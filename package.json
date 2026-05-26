@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "Atlas — HeroUI components themed with the Xeekrs design language, in a layered architecture.",
   "type": "module",
+  "packageManager": "pnpm@10.29.3",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

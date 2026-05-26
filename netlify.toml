@@ -7,17 +7,20 @@
 [build]
   base = "playground"
   # The Atlas library's TypeScript source (in ../src) is compiled in via
-  # Next's externalDir. Its non-optional deps (@heroui/*, clsx,
-  # tailwind-merge, …) only resolve if a node_modules also exists at the
-  # repo root, so we install there before installing in playground.
-  command = "npm install --prefix .. --legacy-peer-deps --no-audit --no-fund && npm install --legacy-peer-deps --no-audit --no-fund && npm run build"
+  # Next's externalDir, so its dependencies (@heroui/*, clsx, tailwind-merge, …)
+  # must be installed at the repo root. We use pnpm there because npm with
+  # --legacy-peer-deps fails to surface the ~48 @heroui/* subpackages that
+  # @heroui/react re-exports. pnpm-lock.yaml at the root is the source of truth.
+  # Playground itself stays on npm (its own .npmrc pins legacy-peer-deps=true).
+  command = "cd .. && corepack enable && pnpm install --frozen-lockfile && cd playground && npm install --legacy-peer-deps --no-audit --no-fund && npm run build"
   publish = ".next"
 
 [build.environment]
-  # The HeroUI subpackages declare conflicting peer-dep ranges; this is
-  # the standard workaround and mirrors the local playground/.npmrc.
+  # Used by the playground's npm install only; pnpm at the root handles
+  # HeroUI's peer-dep tangle natively via pnpm-lock.yaml.
   NPM_FLAGS = "--legacy-peer-deps"
-  # Pin Node so local dev and Netlify agree.
+  # Pin Node so local dev and Netlify agree. Node 20 ships with corepack,
+  # which provisions the pnpm version declared in root package.json.
   NODE_VERSION = "20"
 
 # The Essential Next.js plugin is auto-installed by Netlify for Next apps,
