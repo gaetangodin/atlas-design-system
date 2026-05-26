@@ -13,6 +13,7 @@ export {
   skill,
   sidebar,
   browseHumanServices,
+  spotlight,
   colorRamps,
   jobAiGradients,
 } from "./colorRamps";

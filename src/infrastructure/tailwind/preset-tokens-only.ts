@@ -33,6 +33,7 @@ import {
   skill,
   sidebar,
   browseHumanServices,
+  spotlight,
 } from "../../domain/tokens";
 
 /** Color utilities use `rgb(var(--X-rgb) / <alpha-value>)` pattern so
@@ -130,6 +131,10 @@ export const atlasPresetTokensOnly: Partial<Config> = {
           ring: sidebar.ring,
         },
         browseHumanServices,
+        // Spotlight uses the rgb(... / <alpha-value>) pattern so Tailwind
+        // utilities support alpha modifiers (`text-spotlight/95`).
+        // Source: spotlight.DEFAULT = #F8FFCB = rgb(248 255 203).
+        spotlight: "rgb(248 255 203 / <alpha-value>)",
       },
       spacing,
       borderRadius: {

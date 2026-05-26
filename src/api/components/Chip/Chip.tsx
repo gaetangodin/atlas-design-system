@@ -1,20 +1,18 @@
 /**
- * Chip — Xeekrs library item ported to Atlas.
+ * Chip — raw HeroUI Chip exposed through Atlas.
  *
- * ⚠️ NAMING CONFLICT (logged in docs/MIGRATION-CONFLICTS.md):
- *   Atlas's `Badge` already wraps HeroUI's `Chip` under the hood —
- *   they are functionally the same primitive (pill-shaped label).
- *   Atlas convention was: `Badge` = HeroUI Chip, `NotificationBadge`
- *   = HeroUI Badge.
+ * Atlas ships **both** `Badge` and `Chip` (decided 2026-05):
+ *   - `Badge`  — the branded, opinionated Atlas pill (disables
+ *                animation, named-utility colors, tuned defaults).
+ *                Reach for this in branded surfaces.
+ *   - `Chip`   — raw HeroUI Chip API, untouched. Use when you need
+ *                HeroUI's full prop surface (sizes / variants Atlas
+ *                hasn't reshaped yet).
  *
- *   To honour the "bring everything in side-by-side" policy this
- *   component re-exposes HeroUI Chip directly, untouched. A human
- *   reconciles later — likely outcome: keep Badge as Atlas's branded
- *   pill, remove Chip (or vice versa).
+ * Note: HeroUI's own `Badge` is a different primitive — the
+ * notification dot wrapper, exported in Atlas as `NotificationBadge`.
  *
- *   Until reconciliation, prefer `Badge` for branded usage; reach
- *   for `Chip` only when you need raw HeroUI Chip props (sizes /
- *   variants Atlas hasn't surfaced yet).
+ * See `docs/MIGRATION-CONFLICTS.md` for the full reconciliation note.
  */
 
 import { Chip as HeroUIChip, type ChipProps as HeroUIChipProps } from "@heroui/react";

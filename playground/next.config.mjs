@@ -25,6 +25,7 @@ const nextConfig = {
       sonner: nm("sonner"),
       recharts: nm("recharts"),
       "embla-carousel-react": nm("embla-carousel-react"),
+      "react-resizable-panels": nm("react-resizable-panels"),
     };
     return config;
   },

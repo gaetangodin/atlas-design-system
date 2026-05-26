@@ -89,7 +89,7 @@ Overlays sections against Atlas's public exports.
 
 | Status | Xeekrs page item | Atlas destination | Notes |
 |---|---|---|---|
-| 🟡 CONFLICT | Chip | `src/api/components/Chip/` (new) | Atlas's existing `Badge` IS HeroUI's Chip under the hood (documented in `contracts/component-props.ts`). Per the side-by-side policy, `Chip` is now also exported — it points at raw HeroUI Chip, untouched. Human reconciliation: most likely **KEEP Badge** (branded surface) and **DELETE Chip** (or vice versa); pick one, archive the other to avoid two pill primitives. |
+| ✅ RESOLVED — KEEP BOTH | Chip | `src/api/components/Chip/` | **Human decision (2026-05): keep both `Badge` and `Chip`.** Atlas's `Badge` is the branded, opinionated pill (Atlas defaults — disabled animation, named-utility colors). `Chip` exposes the raw HeroUI Chip API for cases where consumers want HeroUI's full prop surface (sizes / variants Atlas hasn't reshaped yet). Pick whichever fits the consuming code; treat them as distinct primitives. |
 | 🔵 EXTEND | Menu / MenuItem / MenuSection | `src/api/components/Menu/` (already existed) | Component file was in Atlas (branded HeroUI Menu wrapper, Xeekrs-ported), but **not exported from `api/index.ts`** — surfacing now. No new code. |
 | 🔵 EXTEND | Ripple | `src/api/components/Ripple/` (already existed) | Same situation as Menu — file existed, not exported. Surfacing now. |
 | 🔵 EXTEND | AvatarStack (square / support agents) | `src/api/components/AvatarVariants/` (already existed) | Atlas already ports the same Xeekrs `BrandedAvatarStack` source verbatim into `AvatarVariants.tsx` and exports it. **No action needed** — the Xeekrs library page lists AvatarStack as if it were missing, but it isn't. |

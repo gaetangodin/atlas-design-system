@@ -205,6 +205,24 @@ export const browseHumanServices = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Spotlight — `#F8FFCB` accent yellow used across consent / featured  */
+/* surfaces (ConsentAlertBar chrome, "spotlight / featured" rails on   */
+/* recruitment chrome). Promoted from a recurring literal to a named   */
+/* token in the final migration pass.                                  */
+/* ------------------------------------------------------------------ */
+export const spotlight = {
+  DEFAULT: "#F8FFCB",
+  // Pre-baked transparent variants used as glass / overlay accents
+  // (mirrors how Xeekrs uses the literal inline).
+  alpha10: "rgba(248, 255, 203, 0.10)",
+  alpha15: "rgba(248, 255, 203, 0.15)",
+  alpha25: "rgba(248, 255, 203, 0.25)",
+  alpha35: "rgba(248, 255, 203, 0.35)",
+  alpha55: "rgba(248, 255, 203, 0.55)",
+  alpha80: "rgba(248, 255, 203, 0.80)",
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Job AI gradients — used on AI-driven recruitment surfaces (job      */
 /* match overlay, AI-suggested copy backdrop, AI assist banner). Each  */
 /* entry is a CSS `linear-gradient(...)` string ready to drop into     */

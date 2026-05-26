@@ -14,7 +14,12 @@ import { PlaygroundPageSkeleton } from "./PlaygroundPageSkeleton";
 import { FoundationsSection } from "./sections/FoundationsSection";
 import { ShellChromeSection } from "./sections/ShellChromeSection";
 import { TopBarSection } from "./sections/TopBarSection";
+import { DiscoverySection } from "./sections/DiscoverySection";
+import { AnnouncementsSection } from "./sections/AnnouncementsSection";
 import { RecruitmentSection } from "./sections/RecruitmentSection";
+import { RecruitmentCompositionsSection } from "./sections/RecruitmentCompositionsSection";
+import { PostingFlowSection } from "./sections/PostingFlowSection";
+import { MorePrimitivesSection } from "./sections/MorePrimitivesSection";
 import { ButtonsSection } from "./sections/ButtonsSection";
 import { CardsSection } from "./sections/CardsSection";
 import { BadgesSection } from "./sections/BadgesSection";
@@ -62,7 +67,12 @@ export function PlaygroundPage() {
         <FoundationsSection />
         <ShellChromeSection />
         <TopBarSection />
+        <DiscoverySection />
+        <AnnouncementsSection />
         <RecruitmentSection />
+        <RecruitmentCompositionsSection />
+        <PostingFlowSection />
+        <MorePrimitivesSection />
         <ButtonsSection />
         <CardsSection />
         <BadgesSection />

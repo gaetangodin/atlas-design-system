@@ -46,12 +46,12 @@ export interface ConsentAlertBarProps {
 }
 
 const SHELL =
-  "pointer-events-auto relative mx-auto flex w-full max-w-[min(22rem,calc(100vw-2rem))] flex-col gap-3 rounded-3xl border-0 bg-earth-900 p-3 text-[#F8FFCB] shadow-md ring-1 ring-[#F8FFCB]/35 backdrop-blur-sm";
+  "pointer-events-auto relative mx-auto flex w-full max-w-[min(22rem,calc(100vw-2rem))] flex-col gap-3 rounded-3xl border-0 bg-earth-900 p-3 text-spotlight shadow-md ring-1 ring-spotlight/35 backdrop-blur-sm";
 
-const FOOTER_ROW = "flex items-center gap-2 border-t border-[#F8FFCB]/15 pt-2.5";
+const FOOTER_ROW = "flex items-center gap-2 border-t border-spotlight/15 pt-2.5";
 
 const GHOST_BTN =
-  "h-8 flex-1 rounded-full bg-transparent text-xs font-semibold text-[#F8FFCB]/80 transition-colors hover:bg-[#F8FFCB]/10 hover:text-[#F8FFCB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F8FFCB]";
+  "h-8 flex-1 rounded-full bg-transparent text-xs font-semibold text-spotlight/80 transition-colors hover:bg-spotlight/10 hover:text-spotlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-spotlight";
 
 export const ConsentAlertBar = forwardRef<HTMLDivElement, ConsentAlertBarProps>(
   function ConsentAlertBar(
@@ -86,10 +86,10 @@ export const ConsentAlertBar = forwardRef<HTMLDivElement, ConsentAlertBarProps>(
         className={cnHero(SHELL, className)}
       >
         <div className="flex items-center gap-2">
-          <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-[#F8FFCB]/15 text-[#F8FFCB] ring-1 ring-[#F8FFCB]/30">
+          <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-spotlight/15 text-spotlight ring-1 ring-spotlight/30">
             <UserPlus className="size-3.5" strokeWidth={2} aria-hidden />
           </span>
-          <p className="m-0 flex-1 text-sm font-medium tracking-wide text-[#F8FFCB]/95">
+          <p className="m-0 flex-1 text-sm font-medium tracking-wide text-spotlight/95">
             New connection request
           </p>
         </div>
@@ -100,35 +100,35 @@ export const ConsentAlertBar = forwardRef<HTMLDivElement, ConsentAlertBarProps>(
               <img
                 src={photoUrl!}
                 alt=""
-                className="absolute inset-0 size-full rounded-full border border-[#F8FFCB]/30 object-cover"
+                className="absolute inset-0 size-full rounded-full border border-spotlight/30 object-cover"
               />
             </div>
           ) : (
             <div
-              className="flex aspect-square h-full min-h-10 shrink-0 items-center justify-center rounded-full border border-[#F8FFCB]/30 bg-[#F8FFCB]/15 text-xs font-semibold text-[#F8FFCB]"
+              className="flex aspect-square h-full min-h-10 shrink-0 items-center justify-center rounded-full border border-spotlight/30 bg-spotlight/15 text-xs font-semibold text-spotlight"
               aria-hidden
             >
               {avatarInitials}
             </div>
           )}
           <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-1">
-            <h3 className="truncate text-sm font-semibold text-[#F8FFCB]">
+            <h3 className="truncate text-sm font-semibold text-spotlight">
               {displayName}
             </h3>
             {role ? (
-              <span className="inline-flex w-fit max-w-full items-center gap-1 rounded-full border border-[#F8FFCB]/25 bg-[#F8FFCB]/10 px-2 py-0.5 text-xs font-semibold text-[#F8FFCB]/90">
+              <span className="inline-flex w-fit max-w-full items-center gap-1 rounded-full border border-spotlight/25 bg-spotlight/10 px-2 py-0.5 text-xs font-semibold text-spotlight/90">
                 <Briefcase className="size-3 shrink-0" aria-hidden />
                 <span className="truncate">{role}</span>
               </span>
             ) : null}
             {loc ? (
-              <div className="flex items-center gap-1.5 text-xs text-[#F8FFCB]/70">
+              <div className="flex items-center gap-1.5 text-xs text-spotlight/70">
                 <MapPin className="size-3 shrink-0" aria-hidden />
                 <span className="truncate">{loc}</span>
               </div>
             ) : null}
             {metaHint ? (
-              <p className="m-0 text-xs font-medium text-[#F8FFCB]/55">{metaHint}</p>
+              <p className="m-0 text-xs font-medium text-spotlight/55">{metaHint}</p>
             ) : null}
           </div>
         </div>
@@ -150,7 +150,7 @@ export const ConsentAlertBar = forwardRef<HTMLDivElement, ConsentAlertBarProps>(
               <button
                 type="button"
                 onClick={onAccept}
-                className="inline-flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border-0 bg-[#F8FFCB] text-xs font-semibold text-earth-900 shadow-sm transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F8FFCB]"
+                className="inline-flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border-0 bg-spotlight text-xs font-semibold text-earth-900 shadow-sm transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-spotlight"
               >
                 <Check className="size-3.5 shrink-0" aria-hidden />
                 Accept
@@ -171,7 +171,7 @@ export const ConsentAlertBar = forwardRef<HTMLDivElement, ConsentAlertBarProps>(
                     ? "Why this request is pending"
                     : "What happens when you accept"
                 }
-                className="inline-flex size-8 shrink-0 items-center justify-center rounded-full text-[#F8FFCB]/80 transition-colors hover:bg-[#F8FFCB]/10 hover:text-[#F8FFCB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F8FFCB]"
+                className="inline-flex size-8 shrink-0 items-center justify-center rounded-full text-spotlight/80 transition-colors hover:bg-spotlight/10 hover:text-spotlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-spotlight"
               >
                 <HelpCircle className="size-4" strokeWidth={2} aria-hidden />
               </button>

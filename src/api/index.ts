@@ -195,6 +195,12 @@ export { AlertBar } from "./components/AlertBar";
 export type { AlertBarProps, AlertBarTone } from "./components/AlertBar";
 export { ColumnSelector } from "./components/ColumnSelector";
 export type { ColumnSelectorProps, ColumnDefinition } from "./components/ColumnSelector";
+export {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "./components/ResizablePanel";
+export type { ResizableHandleProps } from "./components/ResizablePanel";
 
 // Recruitment primitives (batch 4)
 export {
