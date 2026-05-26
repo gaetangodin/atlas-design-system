@@ -112,12 +112,20 @@ Dependency direction: `api → application → domain`, with `infrastructure`
 implementing ports defined in `application`/`domain`. See
 [ARCHITECTURE.md](./ARCHITECTURE.md) for the full ruleset.
 
-## Status — v0.1
+## Status — v0.2
 
-**108 components shipped across 18 categories. ~92% of the Preline
-catalog covered.** The remaining 3 items in the inventory are explicit
-deferrals (mega menu, custom-scrollbar Radix, tree-DnD); the 6 listed
-as out-of-scope are eCommerce + WYSIWYG (kept app-local).
+**118 components shipped across 20 categories. Full Xeekrs UI library
+migrated except for app-level page assemblies.** v0.2 added 31
+components from the Xeekrs library: foundations & brand layer (color
+ramps, typography, brand assets), shell & chrome (TopBar, SubNav,
+AccountMenu, SiteSwitcherTrigger, MegaSearch, …), recruitment
+primitives (MatchDiamond, ReadinessBadge, QuickActionButton,
+InterviewPipelineStepper, …), posting flow (PostingStepper,
+EntryPathCards, TemplateCard, AiGeneratedBadge, …), and brand polish
+(GradientToken, VoiceAndTone).
+
+Migration log + conflict reconciliation:
+[docs/MIGRATION-CONFLICTS.md](./docs/MIGRATION-CONFLICTS.md).
 
 | Category                          | Coverage |
 | --------------------------------- | -------- |

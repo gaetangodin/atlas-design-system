@@ -360,3 +360,24 @@ The playground in this repo is itself structured as a feature, so it doubles as 
 | Splitting an oversized component | `OverlaysSection.tsx` → `OverlayPopovers.tsx` + `OverlayModals.tsx` |
 
 > Caveat: the playground is a component gallery, not a data-driven feature, so its hook hardcodes `isLoading: false` / `isEmpty` / `error: null` rather than simulating an API. A real feature exercises all three states per Phase 7.
+
+---
+
+## 13. v0.2 component update
+
+Atlas grew from 87 to 118 components in the Xeekrs migration (May 2026).
+This SOP's structural advice is unchanged — pick the primitives you need
+from `@atlas/design-system` and follow the phases above. The new
+component categories worth knowing about:
+
+| Category | New components |
+|---|---|
+| Foundations & brand | `BrandLogo`, `BrandSwatch`, `BrandBoard`, `ColorScale`, `TypographyScale`, `GradientToken`, `VoiceAndTone` |
+| Shell & chrome | `TopBar`, `MobileTopBar`, `MegaSearch`, `SubNav`, `PageBack`, `AccountMenu`, `SiteSwitcherTrigger`, `DisclosureBar`, `ConsentAlertBar`, `BrowseHubCard`, `CoverImageHero`, `SearchToolbar`, `AlertBar` |
+| Recruitment | `MatchDiamond`, `ReadinessBadge`, `QuickActionButton`, `InterviewPipelineStepper`, `ProfileCardToolbar`, `ProfileIdentityWell`, `AnonymousProfileCard`, `ApplicantDocumentMiniCard`, `ContactInfoButton`, `FilterSection` |
+| Posting flow | `PostingStepper`, `EntryPathCards`, `TemplateCard`, `AiGeneratedBadge`, `InlineAiAssist`, `QualityScorePanel`, `InternalNotesField` |
+| Other | `Chip`, `BulletinRow`, `PromotionCard`, `ColumnSelector`, `ResizablePanel` |
+
+Compose these inside feature components like any other primitive — the
+rules are unchanged. Full migration log + conflict policy at
+`docs/MIGRATION-CONFLICTS.md` at the repo root.

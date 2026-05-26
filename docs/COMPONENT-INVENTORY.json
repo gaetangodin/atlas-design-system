@@ -1,0 +1,1270 @@
+{
+  "generatedAt": "2026-05-26T17:39:18.020Z",
+  "componentCount": 125,
+  "totalExports": 394,
+  "components": [
+    {
+      "folder": "Accordion",
+      "components": [
+        "Accordion",
+        "AccordionItem"
+      ],
+      "types": [
+        "AccordionProps"
+      ]
+    },
+    {
+      "folder": "AccountMenu",
+      "components": [
+        "AccountMenu"
+      ],
+      "types": [
+        "AccountMenuProps",
+        "AccountMenuItem"
+      ]
+    },
+    {
+      "folder": "AiGeneratedBadge",
+      "components": [
+        "AiGeneratedBadge"
+      ],
+      "types": [
+        "AiGeneratedBadgeProps",
+        "AiGeneratedBadgeTone"
+      ]
+    },
+    {
+      "folder": "Alert",
+      "components": [
+        "Alert"
+      ],
+      "types": [
+        "AlertProps"
+      ]
+    },
+    {
+      "folder": "AlertBar",
+      "components": [
+        "AlertBar"
+      ],
+      "types": [
+        "AlertBarProps",
+        "AlertBarTone"
+      ]
+    },
+    {
+      "folder": "AlertModal",
+      "components": [
+        "AlertModal"
+      ],
+      "types": [
+        "AlertModalProps"
+      ]
+    },
+    {
+      "folder": "AnonymousProfileCard",
+      "components": [
+        "AnonymousProfileCard"
+      ],
+      "types": [
+        "AnonymousProfileCardProps"
+      ]
+    },
+    {
+      "folder": "ApplicantDocumentMiniCard",
+      "components": [
+        "ApplicantDocumentMiniCard"
+      ],
+      "types": [
+        "ApplicantDocumentMiniCardProps",
+        "DocumentKind"
+      ]
+    },
+    {
+      "folder": "AuthLayout",
+      "components": [
+        "AuthLayout"
+      ],
+      "types": [
+        "AuthLayoutProps"
+      ]
+    },
+    {
+      "folder": "Autocomplete",
+      "components": [
+        "Autocomplete",
+        "AutocompleteItem",
+        "AutocompleteSection"
+      ],
+      "types": [
+        "AutocompleteProps"
+      ]
+    },
+    {
+      "folder": "Avatar",
+      "components": [
+        "Avatar",
+        "AvatarGroup"
+      ],
+      "types": [
+        "AvatarProps",
+        "AvatarGroupProps"
+      ]
+    },
+    {
+      "folder": "AvatarVariants",
+      "components": [
+        "AvatarToned",
+        "AvatarRing",
+        "AvatarSquare",
+        "AvatarHex",
+        "GroupAvatar",
+        "IdentityPill",
+        "AvatarStack"
+      ],
+      "types": [
+        "AvatarTone",
+        "GroupAvatarMember",
+        "IdentityPillProps",
+        "AvatarStackItem"
+      ]
+    },
+    {
+      "folder": "Badge",
+      "components": [
+        "Badge"
+      ],
+      "types": []
+    },
+    {
+      "folder": "Banner",
+      "components": [
+        "Banner"
+      ],
+      "types": [
+        "BannerProps",
+        "BannerTone"
+      ]
+    },
+    {
+      "folder": "BlogPostCard",
+      "components": [
+        "BlogPostCard"
+      ],
+      "types": [
+        "BlogPostCardProps"
+      ]
+    },
+    {
+      "folder": "BottomNav",
+      "components": [
+        "BottomNav"
+      ],
+      "types": [
+        "BottomNavProps",
+        "BottomNavItem"
+      ]
+    },
+    {
+      "folder": "BottomSheet",
+      "components": [
+        "BottomSheet",
+        "BottomSheetTrigger",
+        "BottomSheetPortal",
+        "BottomSheetClose",
+        "BottomSheetOverlay",
+        "BottomSheetContent",
+        "BottomSheetTitle",
+        "BottomSheetDescription"
+      ],
+      "types": [
+        "BottomSheetRootProps",
+        "BottomSheetContentProps"
+      ]
+    },
+    {
+      "folder": "BrandBoard",
+      "components": [
+        "BrandBoard"
+      ],
+      "types": [
+        "BrandBoardProps"
+      ]
+    },
+    {
+      "folder": "BrandLogo",
+      "components": [
+        "BrandLogo"
+      ],
+      "types": [
+        "BrandLogoProps",
+        "BrandLogoVariant"
+      ]
+    },
+    {
+      "folder": "BrandSwatch",
+      "components": [
+        "BrandSwatch"
+      ],
+      "types": [
+        "BrandSwatchProps"
+      ]
+    },
+    {
+      "folder": "Breadcrumbs",
+      "components": [
+        "Breadcrumbs",
+        "BreadcrumbItem"
+      ],
+      "types": [
+        "BreadcrumbsProps"
+      ]
+    },
+    {
+      "folder": "BrowseHubCard",
+      "components": [
+        "BrowseHubCard"
+      ],
+      "types": [
+        "BrowseHubCardProps",
+        "BrowseHubCardVariant"
+      ]
+    },
+    {
+      "folder": "BulletinRow",
+      "components": [
+        "BulletinRow"
+      ],
+      "types": [
+        "BulletinRowProps",
+        "BulletinTone"
+      ]
+    },
+    {
+      "folder": "Button",
+      "components": [
+        "Button"
+      ],
+      "types": []
+    },
+    {
+      "folder": "ButtonGroup",
+      "components": [
+        "ButtonGroup"
+      ],
+      "types": [
+        "ButtonGroupProps"
+      ]
+    },
+    {
+      "folder": "Calendar",
+      "components": [
+        "Calendar",
+        "RangeCalendar",
+        "DatePicker",
+        "DateRangePicker",
+        "DateInput",
+        "TimeInput"
+      ],
+      "types": [
+        "CalendarProps",
+        "RangeCalendarProps",
+        "DatePickerProps",
+        "DateRangePickerProps",
+        "DateInputProps",
+        "TimeInputProps"
+      ]
+    },
+    {
+      "folder": "Card",
+      "components": [
+        "Card",
+        "CardBody",
+        "CardHeader",
+        "CardFooter"
+      ],
+      "types": []
+    },
+    {
+      "folder": "Carousel",
+      "components": [
+        "Carousel"
+      ],
+      "types": [
+        "CarouselProps"
+      ]
+    },
+    {
+      "folder": "Charts",
+      "components": [
+        "BarChart",
+        "LineChart",
+        "AreaChart",
+        "DonutChart",
+        "Sparkline",
+        "BubbleChart"
+      ],
+      "types": [
+        "BarChartProps",
+        "LineChartProps",
+        "AreaChartProps",
+        "DonutChartProps",
+        "DonutChartDatum",
+        "SparklineProps",
+        "BubbleChartProps",
+        "BubbleChartDatum"
+      ]
+    },
+    {
+      "folder": "Checkbox",
+      "components": [
+        "Checkbox",
+        "CheckboxGroup"
+      ],
+      "types": [
+        "CheckboxProps",
+        "CheckboxGroupProps"
+      ]
+    },
+    {
+      "folder": "Chip",
+      "components": [
+        "Chip"
+      ],
+      "types": [
+        "ChipProps"
+      ]
+    },
+    {
+      "folder": "Code",
+      "components": [
+        "Code",
+        "Kbd",
+        "Snippet"
+      ],
+      "types": [
+        "CodeProps",
+        "KbdProps",
+        "SnippetProps"
+      ]
+    },
+    {
+      "folder": "ColorPicker",
+      "components": [
+        "ColorPicker"
+      ],
+      "types": [
+        "ColorPickerProps"
+      ]
+    },
+    {
+      "folder": "ColorScale",
+      "components": [
+        "ColorScale"
+      ],
+      "types": [
+        "ColorScaleProps"
+      ]
+    },
+    {
+      "folder": "ColumnSelector",
+      "components": [
+        "ColumnSelector"
+      ],
+      "types": [
+        "ColumnSelectorProps",
+        "ColumnDefinition"
+      ]
+    },
+    {
+      "folder": "ConsentAlertBar",
+      "components": [
+        "ConsentAlertBar"
+      ],
+      "types": [
+        "ConsentAlertBarProps",
+        "ConsentPerspective"
+      ]
+    },
+    {
+      "folder": "ContactInfoButton",
+      "components": [
+        "ContactInfoButton"
+      ],
+      "types": [
+        "ContactInfoButtonProps",
+        "ContactInfoAudience"
+      ]
+    },
+    {
+      "folder": "Container",
+      "components": [
+        "Container"
+      ],
+      "types": [
+        "ContainerProps"
+      ]
+    },
+    {
+      "folder": "CoverImageHero",
+      "components": [
+        "CoverImageHero"
+      ],
+      "types": [
+        "CoverImageHeroProps",
+        "CoverImageHeroTone"
+      ]
+    },
+    {
+      "folder": "DashboardShell",
+      "components": [
+        "DashboardShell"
+      ],
+      "types": [
+        "DashboardShellProps"
+      ]
+    },
+    {
+      "folder": "DataGrid",
+      "components": [
+        "DataGrid"
+      ],
+      "types": [
+        "DataGridProps",
+        "DataGridColumn"
+      ]
+    },
+    {
+      "folder": "DescriptionList",
+      "components": [
+        "DescriptionList"
+      ],
+      "types": [
+        "DescriptionListProps",
+        "DescriptionListItem"
+      ]
+    },
+    {
+      "folder": "DisclosureBar",
+      "components": [
+        "DisclosureBar"
+      ],
+      "types": [
+        "DisclosureBarProps",
+        "DisclosureBarVariant"
+      ]
+    },
+    {
+      "folder": "Divider",
+      "components": [
+        "Divider"
+      ],
+      "types": [
+        "DividerProps"
+      ]
+    },
+    {
+      "folder": "Drawer",
+      "components": [
+        "Drawer",
+        "DrawerContent",
+        "DrawerHeader",
+        "DrawerBody",
+        "DrawerFooter"
+      ],
+      "types": [
+        "DrawerProps"
+      ]
+    },
+    {
+      "folder": "Dropdown",
+      "components": [
+        "Dropdown",
+        "DropdownTrigger",
+        "DropdownMenu",
+        "DropdownItem",
+        "DropdownSection"
+      ],
+      "types": [
+        "DropdownProps",
+        "DropdownMenuProps"
+      ]
+    },
+    {
+      "folder": "EmptyState",
+      "components": [
+        "EmptyState"
+      ],
+      "types": [
+        "EmptyStateProps"
+      ]
+    },
+    {
+      "folder": "EntryPathCards",
+      "components": [
+        "EntryPathCards"
+      ],
+      "types": [
+        "EntryPathCardsProps",
+        "EntryPathOption"
+      ]
+    },
+    {
+      "folder": "ErrorState",
+      "components": [
+        "ErrorState"
+      ],
+      "types": [
+        "ErrorStateProps"
+      ]
+    },
+    {
+      "folder": "FAQ",
+      "components": [
+        "FAQ"
+      ],
+      "types": [
+        "FAQProps",
+        "FAQItem"
+      ]
+    },
+    {
+      "folder": "FeatureGrid",
+      "components": [
+        "FeatureGrid"
+      ],
+      "types": [
+        "FeatureGridProps",
+        "FeatureGridItem"
+      ]
+    },
+    {
+      "folder": "FileUpload",
+      "components": [
+        "FileUpload"
+      ],
+      "types": [
+        "FileUploadProps"
+      ]
+    },
+    {
+      "folder": "FilterSection",
+      "components": [
+        "FilterSection"
+      ],
+      "types": [
+        "FilterSectionProps"
+      ]
+    },
+    {
+      "folder": "Footer",
+      "components": [
+        "Footer"
+      ],
+      "types": [
+        "FooterProps",
+        "FooterColumn"
+      ]
+    },
+    {
+      "folder": "Form",
+      "components": [
+        "Form"
+      ],
+      "types": [
+        "FormProps"
+      ]
+    },
+    {
+      "folder": "GradientToken",
+      "components": [
+        "GradientToken"
+      ],
+      "types": [
+        "GradientTokenProps"
+      ]
+    },
+    {
+      "folder": "Hero",
+      "components": [
+        "Hero"
+      ],
+      "types": [
+        "HeroProps"
+      ]
+    },
+    {
+      "folder": "Image",
+      "components": [
+        "Image"
+      ],
+      "types": [
+        "ImageProps"
+      ]
+    },
+    {
+      "folder": "InlineAiAssist",
+      "components": [
+        "InlineAiAssist"
+      ],
+      "types": [
+        "InlineAiAssistProps",
+        "AiAssistSuggestion"
+      ]
+    },
+    {
+      "folder": "Input",
+      "components": [
+        "Input",
+        "HEROUI_OUTSIDE_LABEL_PLACEHOLDER"
+      ],
+      "types": []
+    },
+    {
+      "folder": "InputOtp",
+      "components": [
+        "InputOtp"
+      ],
+      "types": [
+        "InputOtpProps"
+      ]
+    },
+    {
+      "folder": "InternalNotesField",
+      "components": [
+        "InternalNotesField"
+      ],
+      "types": [
+        "InternalNotesFieldProps"
+      ]
+    },
+    {
+      "folder": "InterviewPipelineStepper",
+      "components": [
+        "InterviewPipelineStepper"
+      ],
+      "types": [
+        "InterviewPipelineStepperProps",
+        "PipelineStage",
+        "PipelineState",
+        "PipelineClosureRow",
+        "PipelineClosureTone"
+      ]
+    },
+    {
+      "folder": "Link",
+      "components": [
+        "Link"
+      ],
+      "types": [
+        "LinkProps"
+      ]
+    },
+    {
+      "folder": "Listbox",
+      "components": [
+        "Listbox",
+        "ListboxItem",
+        "ListboxSection"
+      ],
+      "types": [
+        "ListboxProps"
+      ]
+    },
+    {
+      "folder": "MatchDiamond",
+      "components": [
+        "MatchDiamond",
+        "matchLevelFromRequiredOverlap",
+        "matchLevelLabel",
+        "matchLevelPillClass"
+      ],
+      "types": [
+        "MatchDiamondProps",
+        "MatchLevel"
+      ]
+    },
+    {
+      "folder": "MegaSearch",
+      "components": [
+        "MegaSearch"
+      ],
+      "types": [
+        "MegaSearchProps"
+      ]
+    },
+    {
+      "folder": "Menu",
+      "components": [
+        "Menu",
+        "MenuItem",
+        "MenuSection"
+      ],
+      "types": [
+        "MenuProps"
+      ]
+    },
+    {
+      "folder": "MobileTopBar",
+      "components": [
+        "MobileTopBar"
+      ],
+      "types": [
+        "MobileTopBarProps"
+      ]
+    },
+    {
+      "folder": "Modal",
+      "components": [
+        "Modal",
+        "ModalContent",
+        "ModalHeader",
+        "ModalBody",
+        "ModalFooter",
+        "useDisclosure"
+      ],
+      "types": [
+        "ModalProps"
+      ]
+    },
+    {
+      "folder": "Navbar",
+      "components": [
+        "Navbar",
+        "NavbarBrand",
+        "NavbarContent",
+        "NavbarItem",
+        "NavbarMenu",
+        "NavbarMenuItem",
+        "NavbarMenuToggle"
+      ],
+      "types": [
+        "NavbarProps"
+      ]
+    },
+    {
+      "folder": "NewsletterCTA",
+      "components": [
+        "NewsletterCTA"
+      ],
+      "types": [
+        "NewsletterCTAProps"
+      ]
+    },
+    {
+      "folder": "NotificationBadge",
+      "components": [
+        "NotificationBadge"
+      ],
+      "types": [
+        "NotificationBadgeProps"
+      ]
+    },
+    {
+      "folder": "NumberInput",
+      "components": [
+        "NumberInput"
+      ],
+      "types": [
+        "NumberInputProps"
+      ]
+    },
+    {
+      "folder": "PageBack",
+      "components": [
+        "PageBack"
+      ],
+      "types": [
+        "PageBackProps",
+        "PageBackVariant"
+      ]
+    },
+    {
+      "folder": "Pagination",
+      "components": [
+        "Pagination",
+        "PaginationItem",
+        "PaginationCursor"
+      ],
+      "types": [
+        "PaginationProps"
+      ]
+    },
+    {
+      "folder": "Popover",
+      "components": [
+        "Popover",
+        "PopoverTrigger",
+        "PopoverContent"
+      ],
+      "types": [
+        "PopoverProps"
+      ]
+    },
+    {
+      "folder": "PostingStepper",
+      "components": [
+        "PostingStepper"
+      ],
+      "types": [
+        "PostingStepperProps"
+      ]
+    },
+    {
+      "folder": "PricingCard",
+      "components": [
+        "PricingCard"
+      ],
+      "types": [
+        "PricingCardProps"
+      ]
+    },
+    {
+      "folder": "PricingTable",
+      "components": [
+        "PricingTable"
+      ],
+      "types": [
+        "PricingTableProps",
+        "PricingTableTier"
+      ]
+    },
+    {
+      "folder": "ProfileCard",
+      "components": [
+        "ProfileCard"
+      ],
+      "types": [
+        "ProfileCardProps"
+      ]
+    },
+    {
+      "folder": "ProfileCardToolbar",
+      "components": [
+        "ProfileCardToolbar"
+      ],
+      "types": [
+        "ProfileCardToolbarProps"
+      ]
+    },
+    {
+      "folder": "ProfileIdentityWell",
+      "components": [
+        "ProfileIdentityWell"
+      ],
+      "types": [
+        "ProfileIdentityWellProps"
+      ]
+    },
+    {
+      "folder": "Progress",
+      "components": [
+        "Progress",
+        "CircularProgress"
+      ],
+      "types": [
+        "ProgressProps",
+        "CircularProgressProps"
+      ]
+    },
+    {
+      "folder": "PromotionCard",
+      "components": [
+        "PromotionCard"
+      ],
+      "types": [
+        "PromotionCardProps",
+        "PromotionCardTone"
+      ]
+    },
+    {
+      "folder": "QualityScorePanel",
+      "components": [
+        "QualityScorePanel"
+      ],
+      "types": [
+        "QualityScorePanelProps",
+        "QualityIssue",
+        "QualityIssueStatus"
+      ]
+    },
+    {
+      "folder": "QuickActionButton",
+      "components": [
+        "QuickActionButton"
+      ],
+      "types": [
+        "QuickActionLabelMode"
+      ]
+    },
+    {
+      "folder": "Radio",
+      "components": [
+        "Radio",
+        "RadioGroup"
+      ],
+      "types": [
+        "RadioProps",
+        "RadioGroupProps"
+      ]
+    },
+    {
+      "folder": "ReadinessBadge",
+      "components": [
+        "ReadinessBadge",
+        "readinessStageClassName"
+      ],
+      "types": [
+        "ReadinessBadgeProps",
+        "ReadinessStage"
+      ]
+    },
+    {
+      "folder": "ResizablePanel",
+      "components": [
+        "ResizablePanelGroup",
+        "ResizablePanel",
+        "ResizableHandle"
+      ],
+      "types": [
+        "ResizableHandleProps"
+      ]
+    },
+    {
+      "folder": "Ripple",
+      "components": [
+        "Ripple"
+      ],
+      "types": []
+    },
+    {
+      "folder": "ScrollShadow",
+      "components": [
+        "ScrollShadow"
+      ],
+      "types": [
+        "ScrollShadowProps"
+      ]
+    },
+    {
+      "folder": "SearchToolbar",
+      "components": [
+        "SearchToolbar"
+      ],
+      "types": [
+        "SearchToolbarProps"
+      ]
+    },
+    {
+      "folder": "Select",
+      "components": [
+        "Select",
+        "SelectItem",
+        "SelectSection"
+      ],
+      "types": [
+        "SelectProps"
+      ]
+    },
+    {
+      "folder": "SettingsLayout",
+      "components": [
+        "SettingsLayout"
+      ],
+      "types": [
+        "SettingsLayoutProps"
+      ]
+    },
+    {
+      "folder": "Sidebar",
+      "components": [
+        "Sidebar"
+      ],
+      "types": [
+        "SidebarProps",
+        "SidebarItem"
+      ]
+    },
+    {
+      "folder": "SiteSwitcherTrigger",
+      "components": [
+        "SiteSwitcherTrigger"
+      ],
+      "types": [
+        "SiteSwitcherTriggerProps",
+        "SiteSwitcherTriggerVariant"
+      ]
+    },
+    {
+      "folder": "Skeleton",
+      "components": [
+        "Skeleton"
+      ],
+      "types": [
+        "SkeletonProps"
+      ]
+    },
+    {
+      "folder": "Slider",
+      "components": [
+        "Slider"
+      ],
+      "types": [
+        "SliderProps"
+      ]
+    },
+    {
+      "folder": "SortableTable",
+      "components": [
+        "SortableTable"
+      ],
+      "types": [
+        "SortableTableProps",
+        "SortableTableColumn"
+      ]
+    },
+    {
+      "folder": "Spacer",
+      "components": [
+        "Spacer"
+      ],
+      "types": [
+        "SpacerProps"
+      ]
+    },
+    {
+      "folder": "Spinner",
+      "components": [
+        "Spinner"
+      ],
+      "types": [
+        "SpinnerProps"
+      ]
+    },
+    {
+      "folder": "Stack",
+      "components": [
+        "Stack",
+        "HStack",
+        "VStack"
+      ],
+      "types": [
+        "StackProps"
+      ]
+    },
+    {
+      "folder": "StatCard",
+      "components": [
+        "StatCard"
+      ],
+      "types": [
+        "StatCardProps"
+      ]
+    },
+    {
+      "folder": "StatusAvatar",
+      "components": [
+        "StatusAvatar"
+      ],
+      "types": [
+        "StatusAvatarProps",
+        "StatusAvatarStatus"
+      ]
+    },
+    {
+      "folder": "Stepper",
+      "components": [
+        "Stepper"
+      ],
+      "types": [
+        "StepperProps",
+        "StepperStep",
+        "StepStatus"
+      ]
+    },
+    {
+      "folder": "SubNav",
+      "components": [
+        "SubNav"
+      ],
+      "types": [
+        "SubNavProps",
+        "SubNavPosition"
+      ]
+    },
+    {
+      "folder": "Switch",
+      "components": [
+        "Switch"
+      ],
+      "types": [
+        "SwitchProps"
+      ]
+    },
+    {
+      "folder": "Table",
+      "components": [
+        "Table",
+        "TableHeader",
+        "TableColumn",
+        "TableBody",
+        "TableRow",
+        "TableCell"
+      ],
+      "types": [
+        "TableProps"
+      ]
+    },
+    {
+      "folder": "Tabs",
+      "components": [
+        "Tabs",
+        "Tab"
+      ],
+      "types": [
+        "TabsProps"
+      ]
+    },
+    {
+      "folder": "TagsInput",
+      "components": [
+        "TagsInput"
+      ],
+      "types": [
+        "TagsInputProps"
+      ]
+    },
+    {
+      "folder": "TeamGrid",
+      "components": [
+        "TeamGrid"
+      ],
+      "types": [
+        "TeamGridProps",
+        "TeamMember"
+      ]
+    },
+    {
+      "folder": "TemplateCard",
+      "components": [
+        "TemplateCard"
+      ],
+      "types": [
+        "TemplateCardProps"
+      ]
+    },
+    {
+      "folder": "Testimonials",
+      "components": [
+        "Testimonials"
+      ],
+      "types": [
+        "TestimonialsProps",
+        "Testimonial"
+      ]
+    },
+    {
+      "folder": "Textarea",
+      "components": [
+        "Textarea"
+      ],
+      "types": []
+    },
+    {
+      "folder": "Timeline",
+      "components": [
+        "Timeline"
+      ],
+      "types": [
+        "TimelineProps",
+        "TimelineEvent"
+      ]
+    },
+    {
+      "folder": "Toaster",
+      "components": [
+        "Toaster",
+        "toast"
+      ],
+      "types": [
+        "ToasterProps"
+      ]
+    },
+    {
+      "folder": "Toggle",
+      "components": [
+        "Toggle"
+      ],
+      "types": [
+        "ToggleProps"
+      ]
+    },
+    {
+      "folder": "Tooltip",
+      "components": [
+        "Tooltip"
+      ],
+      "types": [
+        "TooltipProps"
+      ]
+    },
+    {
+      "folder": "TopBar",
+      "components": [
+        "TopBar"
+      ],
+      "types": [
+        "TopBarProps"
+      ]
+    },
+    {
+      "folder": "TreeView",
+      "components": [
+        "TreeView"
+      ],
+      "types": [
+        "TreeViewProps",
+        "TreeNode"
+      ]
+    },
+    {
+      "folder": "TypographyScale",
+      "components": [
+        "TypographyScale"
+      ],
+      "types": [
+        "TypographyScaleProps",
+        "TypographyScaleVariant"
+      ]
+    },
+    {
+      "folder": "User",
+      "components": [
+        "User"
+      ],
+      "types": [
+        "UserProps"
+      ]
+    },
+    {
+      "folder": "VerticalTabs",
+      "components": [
+        "VerticalTabs",
+        "VerticalTab"
+      ],
+      "types": [
+        "VerticalTabsProps"
+      ]
+    },
+    {
+      "folder": "VoiceAndTone",
+      "components": [
+        "VoiceAndTone"
+      ],
+      "types": [
+        "VoiceAndToneProps",
+        "VoicePair"
+      ]
+    }
+  ]
+}
