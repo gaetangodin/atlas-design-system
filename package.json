@@ -1,6 +1,6 @@
 {
   "name": "@atlas/design-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Atlas — HeroUI components themed with the Xeekrs design language, in a layered architecture.",
   "type": "module",
   "main": "./dist/index.js",

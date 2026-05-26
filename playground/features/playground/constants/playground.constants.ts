@@ -19,6 +19,8 @@ export const PLAYGROUND_NAV: readonly PlaygroundNavItem[] = [
   { id: "foundations", label: "Foundations & brand" },
   { id: "shell-chrome", label: "Shell & chrome" },
   { id: "topbar", label: "TopBar & shells" },
+  { id: "route-shells", label: "Route shells" },
+  { id: "layouts", label: "Dashboards & modals" },
   { id: "discovery", label: "Discovery & marketing" },
   { id: "announcements", label: "Announcements" },
   { id: "recruitment", label: "Recruitment" },

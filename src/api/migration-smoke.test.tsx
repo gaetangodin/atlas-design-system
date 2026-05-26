@@ -375,6 +375,7 @@ describe("v0.2 migration smoke — Brand & data utilities", () => {
   });
 
   // jsdom doesn't ship ResizeObserver; vitest.setup.ts polyfills it.
+  // ── v0.3 additions ─────────────────────────────────────────────
   it("ResizablePanelGroup renders its panels", () => {
     render(
       <ResizablePanelGroup orientation="horizontal" defaultLayout={{ left: 50, right: 50 }}>

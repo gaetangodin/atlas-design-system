@@ -7,6 +7,69 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.3.0] — 2026-05-26
+
+### Added — Full Xeekrs library import (~50 components)
+
+The items marked "permanently deferred" in `docs/MIGRATION-CONFLICTS.md`
+after v0.2 are now in Atlas — as layout shells for app-level surfaces
+(Routes, dashboards, marketing templates) and as real components for
+the modals and compositions.
+
+**Route layout shells (5):** `BoardRoute` (list/index), `DetailRoute`
+(single-record), `WizardRoute` (multi-step), `MobileRoute` (phone
+shell), `ProfileRoute` (record-profile). Slot-based — apps fill
+content / actions / data. Atlas owns no routing or state.
+
+**Named Routes (35):** thin wrappers over the generics with default
+titles baked in — `AcademyDashboardRoute`, `AnalyticsRoute`,
+`AnnouncementsBoardRoute`, `AnnouncementsListRoute`,
+`AnnouncementEditorRoute`, `AnnouncementDetailRoute`, `CandidatesRoute`,
+`CareerHubDashboardRoute`, `CareerProfilesRoute`, `CareerProgressRoute`,
+`CaseloadOverviewRoute`, `CaseloadEmployersRoute`,
+`CaseloadEmployersStageRoute`, `CaseloadTeamRoute`, `CxFeedRoute`,
+`EmployerProfileRoute`, `HelpDeskRoute`, `HelpDeskLearningRoute`,
+`HelpDeskSupportRoute`, `IncentivesManageRoute`,
+`IncentiveTiersListRoute`, `RewardsRoute`, `InterviewsRoute`,
+`JobMatchesRoute`, `JobPostingsIndexRoute`, `JobProcurementRoute`,
+`MarketplaceCatalogueRoute`, `MessagesWorkspaceRoute`,
+`MobileMessagesRoute`, `MobileNotificationsRoute`, `MobileToolkitRoute`,
+`NewPostingRoute`, `ReferralNetworkRoute`, `ResumeBuilderRoute`,
+`SupportNetworkRoute`.
+
+**Dashboards (5):** `AnalyticsDashboard`, `CoachingDashboard`,
+`AdminPanel`, `JobExplorer`, `CareerHubDashboard` — slot-based shells
+with `kpis` / `filters` / `charts` / `tableOrFeed` slots.
+
+**Domain modals (4, real components):** `IntroVideoDialog` (16:9 video
+playback), `VideoInterviewModal` (full-screen call chrome with mic /
+cam / leave controls), `ApplicationModal` (cover note + docs +
+consent), `CreateProjectWizard` (multi-step wizard inside Modal).
+
+**Specialized recruitment compositions (3):** `InterviewEventRecap`,
+`ApplicantReviewRecap`, `ShareCandidatePreviewCard`.
+
+**Messaging compositions (4):** `ChatOpportunityCard`, `GroupChatAvatar`
+(overlapping avatar stack for group threads), `CannedMessageSelector`
+(popover with Templates + AI Assist tabs), `ClientTouchpointCards`.
+
+**Marketing templates (4):** `MarketingHero` (4 tones using
+`jobAiGradients`), `SocialPostTemplate` (1080×1080 square),
+`DisplayAdTemplate` (IAB sizes: medium-rectangle / leaderboard /
+skyscraper), `CampaignSet` (grid of campaign tiles).
+
+### Surface count
+
+Atlas surface is now **138 component folders / 446 exports** (was
+125 / 394 in v0.2). See `docs/COMPONENT-INVENTORY.json` (auto-generated
+by `scripts/gen-component-inventory.mjs` — CI fails on drift).
+
+### Migration manifest
+
+`docs/MIGRATION-CONFLICTS.md` has been updated — the "Permanently
+deferred" section is empty. Everything on the Xeekrs library page is
+now in Atlas as either a real primitive or a named layout shell.
+
 ## [0.2.0] — 2026-05-26
 
 ### Added — Xeekrs UI library migration (31 net new components)

@@ -317,29 +317,58 @@ design system.
 
 ---
 
-## Permanently deferred (not Atlas's responsibility)
+## v0.3.0 — full library import
 
-These items appear on the Xeekrs library page but don't belong in the design
-system — they're app-feature compositions specific to the Xeekrs product.
-Atlas provides the primitives (Card, Modal, Tabs, Charts, etc.) that
-consuming apps use to assemble them.
+In v0.2 these items were marked "permanently deferred" with the argument
+that they belonged in consuming apps. v0.3 imports them anyway — as
+**layout shells** for app-level surfaces (Routes, dashboards, marketing
+templates) and **real components** for the modals and compositions. The
+shape Atlas takes: it owns the layout vocabulary and visual chrome;
+apps still own routing, data, and state.
 
-- **~30 Route components** — `AcademyDashboardRoute`, `AnalyticsRoute`, all the `*Route` entries. Page-level assemblies = app concern.
-- **Full dashboards** — AnalyticsDashboard, CoachingDashboard, AdminPanel, JobExplorer, CareerHubDashboard. Each is a multi-screen feature module composed from Atlas primitives.
-- **Domain modals** — IntroVideoDialog, VideoInterviewModal, ApplicationModal, ApplicationStatusModal, CreateProjectWizard. Build these with Atlas's `Modal` + `AlertModal` + the new `PostingStepper`.
-- **Specialized recruitment compositions** — InterviewEventRecap, ApplicantReviewRecap, ShareCandidatePreviewCard, AnnouncementDetailAdminMetaBadges. These are tightly bound to Xeekrs's data shapes.
-- **Academy patterns** — Academy training CTA, MyLearning cards, Coach hub panel. Domain-specific compositions.
-- **Messaging patterns** — ChatOpportunityCard, GroupChatAvatar, ClientTouchpointCards, CannedMessageSelector (Templates / AI Assist), ChatConnectionReceivedBar. Use Atlas's atoms; if a pattern emerges, lift later.
-- **HomeSearchBar, CareerHubCard / Progress / Sidebar, IncentiveTierAssignCard, LocationFilterCombobox, EmployerOnboardingLocationStep** — feature-specific assemblies.
-- **ResizablePanel** — needs new optional peer `react-resizable-panels`. Standalone mini-batch when needed.
-- **Marketing patterns** (hero sample, social posts, display ads, campaigns) — design surfaces, not engineering primitives.
-- **Component inventory auto-generation** — useful tooling, not a component.
+| Category | What landed |
+|---|---|
+| Route layout shells (5) | `BoardRoute`, `DetailRoute`, `WizardRoute`, `MobileRoute`, `ProfileRoute` |
+| Named Routes (35) | Thin wrappers — `AcademyDashboardRoute`, `AnalyticsRoute`, `AnnouncementsBoardRoute`, `AnnouncementsListRoute`, `AnnouncementEditorRoute`, `AnnouncementDetailRoute`, `CandidatesRoute`, `CareerHubDashboardRoute`, `CareerProfilesRoute`, `CareerProgressRoute`, `CaseloadOverviewRoute`, `CaseloadEmployersRoute`, `CaseloadEmployersStageRoute`, `CaseloadTeamRoute`, `CxFeedRoute`, `EmployerProfileRoute`, `HelpDeskRoute`, `HelpDeskLearningRoute`, `HelpDeskSupportRoute`, `IncentivesManageRoute`, `IncentiveTiersListRoute`, `RewardsRoute`, `InterviewsRoute`, `JobMatchesRoute`, `JobPostingsIndexRoute`, `JobProcurementRoute`, `MarketplaceCatalogueRoute`, `MessagesWorkspaceRoute`, `MobileMessagesRoute`, `MobileNotificationsRoute`, `MobileToolkitRoute`, `NewPostingRoute`, `ReferralNetworkRoute`, `ResumeBuilderRoute`, `SupportNetworkRoute` |
+| Dashboards (5) | `AnalyticsDashboard`, `CoachingDashboard`, `AdminPanel`, `JobExplorer`, `CareerHubDashboard` (slot shells) |
+| Domain modals (4) | `IntroVideoDialog`, `VideoInterviewModal`, `ApplicationModal`, `CreateProjectWizard` (real components) |
+| Recruitment recaps (3) | `InterviewEventRecap`, `ApplicantReviewRecap`, `ShareCandidatePreviewCard` |
+| Messaging (4) | `ChatOpportunityCard`, `GroupChatAvatar`, `CannedMessageSelector`, `ClientTouchpointCards` |
+| Marketing templates (4) | `MarketingHero`, `SocialPostTemplate`, `DisplayAdTemplate`, `CampaignSet` |
+
+### Reading the layout shells
+
+The Route shells are **not routers**. They're page-shell layouts named
+after Xeekrs's route components. Apps wire their own routing on top and
+pass content into slots. Pattern:
+
+```tsx
+// e.g. inside your Next.js `app/analytics/page.tsx`
+import { AnalyticsRoute, StatCard, BarChart } from "@atlas/design-system";
+
+export default function Page() {
+  return (
+    <AnalyticsRoute
+      actions={<DateRangePicker />}
+      toolbar={<SearchToolbar searchInput={…} />}
+    >
+      {/* real KPIs + charts here */}
+    </AnalyticsRoute>
+  );
+}
+```
+
+Named Routes differ from each other only in the baked-in title — they
+all reduce to one of the 5 generic shells. Apps that want full control
+can use the generic shell directly and skip the named wrapper.
 
 ---
 
 ## Final state
 
-Atlas surface: **117 components** (was 87 pre-migration). All new components
-compile cleanly. Production build: `/playground` 16.5 kB / 616 kB First Load
-JS, 5 routes prerendered as static. Manifest is the source of truth for
-every ported item, every conflict, and every intentional deferral.
+Atlas surface: **138 component folders / 446 exports** (was 87
+pre-migration; 117 after v0.2). All categories on the Xeekrs UI
+library page are now represented. Component inventory snapshot lives
+at `docs/COMPONENT-INVENTORY.json` (regenerable via
+`npm run docs:inventory`; CI fails on drift). Manifest is the source
+of truth for every ported item.

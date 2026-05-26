@@ -14,6 +14,8 @@ import { PlaygroundPageSkeleton } from "./PlaygroundPageSkeleton";
 import { FoundationsSection } from "./sections/FoundationsSection";
 import { ShellChromeSection } from "./sections/ShellChromeSection";
 import { TopBarSection } from "./sections/TopBarSection";
+import { RouteShellsSection } from "./sections/RouteShellsSection";
+import { DashboardsAndModalsSection } from "./sections/DashboardsAndModalsSection";
 import { DiscoverySection } from "./sections/DiscoverySection";
 import { AnnouncementsSection } from "./sections/AnnouncementsSection";
 import { RecruitmentSection } from "./sections/RecruitmentSection";
@@ -67,6 +69,8 @@ export function PlaygroundPage() {
         <FoundationsSection />
         <ShellChromeSection />
         <TopBarSection />
+        <RouteShellsSection />
+        <DashboardsAndModalsSection />
         <DiscoverySection />
         <AnnouncementsSection />
         <RecruitmentSection />
