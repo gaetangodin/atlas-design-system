@@ -292,11 +292,54 @@ additive extension to existing files.
 **Build verified.** `next build` ✓ — `/playground` 16.5 kB / 612 kB First Load
 JS, 5 routes prerendered as static content.
 
-## Still deferred (future batches)
+## Final batch — remaining tractable items
 
-- **3.8** — SearchToolbar, CoverImageHero (need design decisions).
-- **4.5** — Recruitment compositions: AnonymousProfileCard, ProfileCardToolbar, ProfileIdentityWell, contact popovers (Candidate / Company), IntroVideoDialog, VideoInterviewModal, ApplicantDocuments (full + mini + section icon), 5 filter sections (MatchLevel / MatchStatus / Sector / Worksite / SidebarSearch), InterviewEventRecap, ApplicantReviewRecap, LocationFilterCombobox, EmployerOnboardingLocationStep, ShareCandidatePreviewCard, AnnouncementDetailAdminMetaBadges.
-- **5.5** — PostingStepper (composite over Atlas Stepper with the wizard chrome).
-- **6** — Product patterns: academy CTAs, ChatOpportunityCard, GroupChatAvatar, CannedMessageSelector (Templates + AI Assist), ClientTouchpointCards, CoachHubPanel, CoverImageSection, HomeSearchBar, CareerHubCard/Progress/Sidebar, JobExplorer, AnalyticsDashboard, CoachingDashboard, CoachboardTasks, AdminPanel, AdminPatternsDoc, CreateProjectWizard, ColumnSelector, ApplicationModal, ApplicationStatusModal, IncentiveTierAssignCard, PromotionCard, PromotionPostcardModal, MobileAlertModal, BulletinRow, top-page AlertBar.
-- **7.5** — Component inventory auto-gen, marketing patterns, ResizablePanel mini-batch.
-- **Route-level pages** — ~30 `*Route` components. These belong in consuming apps, not the design system, but a "shells" example library could help.
+This batch closes out everything that ports cleanly as an atom or a small
+composition. Truly app-level surfaces (full dashboards, ~30 route pages,
+20+ product modals) stay out — they belong in consuming apps, not the
+design system.
+
+| Status | Xeekrs library item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | PostingStepper | `src/api/components/PostingStepper/` | Wraps Atlas's generic `Stepper` with the wizard sidebar chrome (sticky card + step-of-total header). |
+| 🟢 NEW | SearchToolbar | `src/api/components/SearchToolbar/` | Slot-based: `searchInput` + `chips` + `trailing` + `secondary`. Sticky-mode optional. |
+| 🟢 NEW | CoverImageHero | `src/api/components/CoverImageHero/` | Full-width hero band with three tone variants (`none` / `dark` / `gradient`). Reuses `jobAiGradients.hero` for the gradient tone. |
+| 🟢 NEW | ProfileCardToolbar | `src/api/components/ProfileCardToolbar/` | Action row with `leading` + `trailing` slots. |
+| 🟢 NEW | ProfileIdentityWell | `src/api/components/ProfileIdentityWell/` | Name + avatar + role + location block with anonymized fallback. |
+| 🟢 NEW | AnonymousProfileCard | `src/api/components/AnonymousProfileCard/` | Composition over `ProfileCardToolbar` + `ProfileIdentityWell` + Atlas Card. |
+| 🟢 NEW | ApplicantDocumentMiniCard | `src/api/components/ApplicantDocumentMiniCard/` | Compact document tile with kind icon, meta, preview / download actions, and ready / pending / error state. |
+| 🟢 NEW | CandidateContactInfoButton / CompanyContactInfoButton | `src/api/components/ContactInfoButton/` | Unified `ContactInfoButton` with `audience="candidate" \| "company"` prop. Popover content is whatever the app passes as children. |
+| 🟢 NEW | BulletinRow | `src/api/components/BulletinRow/` | Single-line announcement row with status pip, polymorphic link / button. |
+| 🟢 NEW | PromotionCard / PromotionPostcardModal | `src/api/components/PromotionCard/` | Illustrated promo card with 4 tones (lavender / earth / warm / image). Wrap in Atlas `Modal` for the postcard variant. |
+| 🟢 NEW | 5 filter sections (MatchLevel / MatchStatus / Sector / Worksite / SidebarSearch) | `src/api/components/FilterSection/` | One generic collapsible filter group — apps pass body children. The 5 Xeekrs variants are the same structure with different copy / inputs. |
+| 🟢 NEW | top-page AlertBar | `src/api/components/AlertBar/` | Shell-level announcement bar (above TopBar). 4 tones, optional sticky + dismiss. |
+| 🟢 NEW | ColumnSelector | `src/api/components/ColumnSelector/` | Popover-based "show / hide columns" picker for tables. |
+
+---
+
+## Permanently deferred (not Atlas's responsibility)
+
+These items appear on the Xeekrs library page but don't belong in the design
+system — they're app-feature compositions specific to the Xeekrs product.
+Atlas provides the primitives (Card, Modal, Tabs, Charts, etc.) that
+consuming apps use to assemble them.
+
+- **~30 Route components** — `AcademyDashboardRoute`, `AnalyticsRoute`, all the `*Route` entries. Page-level assemblies = app concern.
+- **Full dashboards** — AnalyticsDashboard, CoachingDashboard, AdminPanel, JobExplorer, CareerHubDashboard. Each is a multi-screen feature module composed from Atlas primitives.
+- **Domain modals** — IntroVideoDialog, VideoInterviewModal, ApplicationModal, ApplicationStatusModal, CreateProjectWizard. Build these with Atlas's `Modal` + `AlertModal` + the new `PostingStepper`.
+- **Specialized recruitment compositions** — InterviewEventRecap, ApplicantReviewRecap, ShareCandidatePreviewCard, AnnouncementDetailAdminMetaBadges. These are tightly bound to Xeekrs's data shapes.
+- **Academy patterns** — Academy training CTA, MyLearning cards, Coach hub panel. Domain-specific compositions.
+- **Messaging patterns** — ChatOpportunityCard, GroupChatAvatar, ClientTouchpointCards, CannedMessageSelector (Templates / AI Assist), ChatConnectionReceivedBar. Use Atlas's atoms; if a pattern emerges, lift later.
+- **HomeSearchBar, CareerHubCard / Progress / Sidebar, IncentiveTierAssignCard, LocationFilterCombobox, EmployerOnboardingLocationStep** — feature-specific assemblies.
+- **ResizablePanel** — needs new optional peer `react-resizable-panels`. Standalone mini-batch when needed.
+- **Marketing patterns** (hero sample, social posts, display ads, campaigns) — design surfaces, not engineering primitives.
+- **Component inventory auto-generation** — useful tooling, not a component.
+
+---
+
+## Final state
+
+Atlas surface: **117 components** (was 87 pre-migration). All new components
+compile cleanly. Production build: `/playground` 16.5 kB / 616 kB First Load
+JS, 5 routes prerendered as static. Manifest is the source of truth for
+every ported item, every conflict, and every intentional deferral.

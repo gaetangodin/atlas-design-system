@@ -162,6 +162,40 @@ export type { GradientTokenProps } from "./components/GradientToken";
 export { VoiceAndTone } from "./components/VoiceAndTone";
 export type { VoiceAndToneProps, VoicePair } from "./components/VoiceAndTone";
 
+// Final batch — remaining tractable items
+export { PostingStepper } from "./components/PostingStepper";
+export type { PostingStepperProps } from "./components/PostingStepper";
+export { SearchToolbar } from "./components/SearchToolbar";
+export type { SearchToolbarProps } from "./components/SearchToolbar";
+export { CoverImageHero } from "./components/CoverImageHero";
+export type { CoverImageHeroProps, CoverImageHeroTone } from "./components/CoverImageHero";
+export { ProfileCardToolbar } from "./components/ProfileCardToolbar";
+export type { ProfileCardToolbarProps } from "./components/ProfileCardToolbar";
+export { ProfileIdentityWell } from "./components/ProfileIdentityWell";
+export type { ProfileIdentityWellProps } from "./components/ProfileIdentityWell";
+export { ApplicantDocumentMiniCard } from "./components/ApplicantDocumentMiniCard";
+export type {
+  ApplicantDocumentMiniCardProps,
+  DocumentKind,
+} from "./components/ApplicantDocumentMiniCard";
+export { ContactInfoButton } from "./components/ContactInfoButton";
+export type {
+  ContactInfoButtonProps,
+  ContactInfoAudience,
+} from "./components/ContactInfoButton";
+export { AnonymousProfileCard } from "./components/AnonymousProfileCard";
+export type { AnonymousProfileCardProps } from "./components/AnonymousProfileCard";
+export { BulletinRow } from "./components/BulletinRow";
+export type { BulletinRowProps, BulletinTone } from "./components/BulletinRow";
+export { PromotionCard } from "./components/PromotionCard";
+export type { PromotionCardProps, PromotionCardTone } from "./components/PromotionCard";
+export { FilterSection } from "./components/FilterSection";
+export type { FilterSectionProps } from "./components/FilterSection";
+export { AlertBar } from "./components/AlertBar";
+export type { AlertBarProps, AlertBarTone } from "./components/AlertBar";
+export { ColumnSelector } from "./components/ColumnSelector";
+export type { ColumnSelectorProps, ColumnDefinition } from "./components/ColumnSelector";
+
 // Recruitment primitives (batch 4)
 export {
   MatchDiamond,
