@@ -45,11 +45,13 @@ export function ResizablePanel(props: ResizablePanelProps) {
   return <Panel data-slot="resizable-panel" {...props} />;
 }
 
-export interface ResizableHandleProps extends ComponentProps<typeof Separator> {
+export type ResizableHandleProps = ComponentProps<typeof Separator> & {
   /** Render a centered grip affordance on the handle. */
   withHandle?: boolean;
+  /** Extra Tailwind classes on the handle root. */
+  className?: string;
   children?: ReactNode;
-}
+};
 
 export function ResizableHandle({
   withHandle,

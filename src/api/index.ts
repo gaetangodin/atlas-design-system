@@ -202,6 +202,87 @@ export {
 } from "./components/ResizablePanel";
 export type { ResizableHandleProps } from "./components/ResizablePanel";
 
+// Route page-shell layouts (batch — Routes, Dashboards, Modals, Compositions)
+export { BoardRoute } from "./components/BoardRoute";
+export type { BoardRouteProps } from "./components/BoardRoute";
+export { DetailRoute } from "./components/DetailRoute";
+export type { DetailRouteProps } from "./components/DetailRoute";
+export { WizardRoute } from "./components/WizardRoute";
+export type { WizardRouteProps } from "./components/WizardRoute";
+export { MobileRoute } from "./components/MobileRoute";
+export type { MobileRouteProps } from "./components/MobileRoute";
+export { ProfileRoute } from "./components/ProfileRoute";
+export type { ProfileRouteProps } from "./components/ProfileRoute";
+
+// Named Routes — thin wrappers over the generic shells.
+export * from "./components/NamedRoutes";
+
+// Dashboards (slot-based shells).
+export {
+  AnalyticsDashboard,
+  CoachingDashboard,
+  AdminPanel,
+  JobExplorer,
+  CareerHubDashboard,
+} from "./components/Dashboards";
+export type { DashboardProps } from "./components/Dashboards";
+
+// Domain modals.
+export { IntroVideoDialog } from "./components/IntroVideoDialog";
+export type { IntroVideoDialogProps } from "./components/IntroVideoDialog";
+export { VideoInterviewModal } from "./components/VideoInterviewModal";
+export type { VideoInterviewModalProps } from "./components/VideoInterviewModal";
+export { ApplicationModal } from "./components/ApplicationModal";
+export type { ApplicationModalProps } from "./components/ApplicationModal";
+export { CreateProjectWizard } from "./components/CreateProjectWizard";
+export type { CreateProjectWizardProps } from "./components/CreateProjectWizard";
+
+// Specialized recruitment compositions.
+export {
+  InterviewEventRecap,
+  ApplicantReviewRecap,
+  ShareCandidatePreviewCard,
+} from "./components/RecruitmentRecaps";
+export type {
+  InterviewEventRecapProps,
+  ApplicantReviewRecapProps,
+  ShareCandidatePreviewCardProps,
+} from "./components/RecruitmentRecaps";
+
+// Messaging compositions.
+export {
+  ChatOpportunityCard,
+  GroupChatAvatar,
+  CannedMessageSelector,
+  ClientTouchpointCards,
+} from "./components/MessagingPatterns";
+export type {
+  ChatOpportunityCardProps,
+  GroupChatAvatarProps,
+  GroupChatAvatarMember,
+  CannedMessageSelectorProps,
+  CannedTemplate,
+  ClientTouchpointCardsProps,
+  ClientTouchpoint,
+  TouchpointKind,
+} from "./components/MessagingPatterns";
+
+// Marketing templates.
+export {
+  MarketingHero,
+  SocialPostTemplate,
+  DisplayAdTemplate,
+  CampaignSet,
+} from "./components/MarketingTemplates";
+export type {
+  MarketingHeroProps,
+  MarketingHeroTone,
+  SocialPostTemplateProps,
+  DisplayAdTemplateProps,
+  CampaignSetProps,
+  CampaignTile,
+} from "./components/MarketingTemplates";
+
 // Recruitment primitives (batch 4)
 export {
   MatchDiamond,

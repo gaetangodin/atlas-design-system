@@ -1,6 +1,6 @@
 {
-  "componentCount": 125,
-  "totalExports": 394,
+  "componentCount": 138,
+  "totalExports": 446,
   "components": [
     {
       "folder": "Accordion",
@@ -80,6 +80,15 @@
       ]
     },
     {
+      "folder": "ApplicationModal",
+      "components": [
+        "ApplicationModal"
+      ],
+      "types": [
+        "ApplicationModalProps"
+      ]
+    },
+    {
       "folder": "AuthLayout",
       "components": [
         "AuthLayout"
@@ -152,6 +161,15 @@
       ],
       "types": [
         "BlogPostCardProps"
+      ]
+    },
+    {
+      "folder": "BoardRoute",
+      "components": [
+        "BoardRoute"
+      ],
+      "types": [
+        "BoardRouteProps"
       ]
     },
     {
@@ -415,6 +433,28 @@
       ]
     },
     {
+      "folder": "CreateProjectWizard",
+      "components": [
+        "CreateProjectWizard"
+      ],
+      "types": [
+        "CreateProjectWizardProps"
+      ]
+    },
+    {
+      "folder": "Dashboards",
+      "components": [
+        "AnalyticsDashboard",
+        "CoachingDashboard",
+        "AdminPanel",
+        "JobExplorer",
+        "CareerHubDashboard"
+      ],
+      "types": [
+        "DashboardProps"
+      ]
+    },
+    {
       "folder": "DashboardShell",
       "components": [
         "DashboardShell"
@@ -441,6 +481,15 @@
       "types": [
         "DescriptionListProps",
         "DescriptionListItem"
+      ]
+    },
+    {
+      "folder": "DetailRoute",
+      "components": [
+        "DetailRoute"
+      ],
+      "types": [
+        "DetailRouteProps"
       ]
     },
     {
@@ -651,6 +700,15 @@
       ]
     },
     {
+      "folder": "IntroVideoDialog",
+      "components": [
+        "IntroVideoDialog"
+      ],
+      "types": [
+        "IntroVideoDialogProps"
+      ]
+    },
+    {
       "folder": "Link",
       "components": [
         "Link"
@@ -668,6 +726,23 @@
       ],
       "types": [
         "ListboxProps"
+      ]
+    },
+    {
+      "folder": "MarketingTemplates",
+      "components": [
+        "MarketingHero",
+        "SocialPostTemplate",
+        "DisplayAdTemplate",
+        "CampaignSet"
+      ],
+      "types": [
+        "MarketingHeroProps",
+        "MarketingHeroTone",
+        "SocialPostTemplateProps",
+        "DisplayAdTemplateProps",
+        "CampaignSetProps",
+        "CampaignTile"
       ]
     },
     {
@@ -701,6 +776,34 @@
       ],
       "types": [
         "MenuProps"
+      ]
+    },
+    {
+      "folder": "MessagingPatterns",
+      "components": [
+        "ChatOpportunityCard",
+        "GroupChatAvatar",
+        "CannedMessageSelector",
+        "ClientTouchpointCards"
+      ],
+      "types": [
+        "ChatOpportunityCardProps",
+        "GroupChatAvatarProps",
+        "GroupChatAvatarMember",
+        "CannedMessageSelectorProps",
+        "CannedTemplate",
+        "ClientTouchpointCardsProps",
+        "ClientTouchpoint",
+        "TouchpointKind"
+      ]
+    },
+    {
+      "folder": "MobileRoute",
+      "components": [
+        "MobileRoute"
+      ],
+      "types": [
+        "MobileRouteProps"
       ]
     },
     {
@@ -856,6 +959,15 @@
       ]
     },
     {
+      "folder": "ProfileRoute",
+      "components": [
+        "ProfileRoute"
+      ],
+      "types": [
+        "ProfileRouteProps"
+      ]
+    },
+    {
       "folder": "Progress",
       "components": [
         "Progress",
@@ -916,6 +1028,19 @@
       "types": [
         "ReadinessBadgeProps",
         "ReadinessStage"
+      ]
+    },
+    {
+      "folder": "RecruitmentRecaps",
+      "components": [
+        "InterviewEventRecap",
+        "ApplicantReviewRecap",
+        "ShareCandidatePreviewCard"
+      ],
+      "types": [
+        "InterviewEventRecapProps",
+        "ApplicantReviewRecapProps",
+        "ShareCandidatePreviewCardProps"
       ]
     },
     {
@@ -1256,6 +1381,15 @@
       ]
     },
     {
+      "folder": "VideoInterviewModal",
+      "components": [
+        "VideoInterviewModal"
+      ],
+      "types": [
+        "VideoInterviewModalProps"
+      ]
+    },
+    {
       "folder": "VoiceAndTone",
       "components": [
         "VoiceAndTone"
@@ -1263,6 +1397,15 @@
       "types": [
         "VoiceAndToneProps",
         "VoicePair"
+      ]
+    },
+    {
+      "folder": "WizardRoute",
+      "components": [
+        "WizardRoute"
+      ],
+      "types": [
+        "WizardRouteProps"
       ]
     }
   ]
