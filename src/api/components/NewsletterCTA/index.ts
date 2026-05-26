@@ -1,0 +1,2 @@
+export { NewsletterCTA } from "./NewsletterCTA";
+export type { NewsletterCTAProps } from "./NewsletterCTA";

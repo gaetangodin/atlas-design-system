@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Atlas token contract — mirrors the consumer's globals.css. The
+   `--X-rgb` triplet pair lets Tailwind alpha modifiers (bg-primary/40)
+   work. Values match the fallback palette in src/domain/tokens/colors.ts. */
+:root {
+  --background-rgb: 249 249 244;
+  --background: rgb(var(--background-rgb));
+  --foreground-rgb: 18 33 32;
+  --foreground: rgb(var(--foreground-rgb));
+
+  --card-rgb: 255 255 255;
+  --card: rgb(var(--card-rgb));
+  --card-foreground-rgb: 68 64 60;
+  --card-foreground: rgb(var(--card-foreground-rgb));
+
+  --popover-rgb: 252 252 247;
+  --popover: rgb(var(--popover-rgb));
+  --popover-foreground-rgb: 68 64 60;
+  --popover-foreground: rgb(var(--popover-foreground-rgb));
+
+  --primary-rgb: 12 33 32;
+  --primary: rgb(var(--primary-rgb));
+  --primary-foreground-rgb: 255 255 255;
+  --primary-foreground: rgb(var(--primary-foreground-rgb));
+
+  --secondary-rgb: 255 255 255;
+  --secondary: rgb(var(--secondary-rgb));
+  --secondary-foreground-rgb: 12 33 32;
+  --secondary-foreground: rgb(var(--secondary-foreground-rgb));
+
+  --muted-rgb: 237 237 232;
+  --muted: rgb(var(--muted-rgb));
+  --muted-foreground-rgb: 120 113 108;
+  --muted-foreground: rgb(var(--muted-foreground-rgb));
+
+  --accent-rgb: 76 111 220;
+  --accent: rgb(var(--accent-rgb));
+  --accent-foreground-rgb: 255 255 255;
+  --accent-foreground: rgb(var(--accent-foreground-rgb));
+
+  --destructive-rgb: 243 18 96;
+  --destructive: rgb(var(--destructive-rgb));
+  --destructive-foreground-rgb: 255 255 255;
+  --destructive-foreground: rgb(var(--destructive-foreground-rgb));
+
+  --success-rgb: 16 185 129;
+  --success: rgb(var(--success-rgb));
+  --success-foreground-rgb: 255 255 255;
+  --success-foreground: rgb(var(--success-foreground-rgb));
+
+  --warning-rgb: 245 158 11;
+  --warning: rgb(var(--warning-rgb));
+  --warning-foreground-rgb: 255 255 255;
+  --warning-foreground: rgb(var(--warning-foreground-rgb));
+
+  --error-rgb: 239 68 68;
+  --error: rgb(var(--error-rgb));
+  --error-foreground-rgb: 255 255 255;
+  --error-foreground: rgb(var(--error-foreground-rgb));
+
+  --info-rgb: 59 130 246;
+  --info: rgb(var(--info-rgb));
+  --info-foreground-rgb: 255 255 255;
+  --info-foreground: rgb(var(--info-foreground-rgb));
+
+  --border-rgb: 237 237 232;
+  --border: rgb(var(--border-rgb));
+  --input-rgb: 255 255 255;
+  --input: rgb(var(--input-rgb));
+  --input-background-rgb: 255 255 255;
+  --input-background: rgb(var(--input-background-rgb));
+  --ring-rgb: 153 199 251;
+  --ring: rgb(var(--ring-rgb));
+
+  --radius: 12px;
+}
+
+html,
+body {
+  min-height: 100vh;
+}

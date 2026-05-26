@@ -1,0 +1,26 @@
+node_modules/
+dist/
+build/
+coverage/
+.turbo/
+.next/
+.cache/
+.DS_Store
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+.env
+.env.local
+.env.*.local
+.idea/
+.vscode/*
+!.vscode/settings.json
+
+# Storybook build output
+storybook-static/
+
+# Vitest dev artifacts
+vitest.config.ts.timestamp-*.mjs
+
+# Netlify CLI state (per-machine, never commit)
+.netlify/

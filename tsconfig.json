@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@atlas/domain": ["src/domain"],
+      "@atlas/domain/*": ["src/domain/*"],
+      "@atlas/application": ["src/application"],
+      "@atlas/application/*": ["src/application/*"],
+      "@atlas/infrastructure": ["src/infrastructure"],
+      "@atlas/infrastructure/*": ["src/infrastructure/*"],
+      "@atlas/api": ["src/api"],
+      "@atlas/api/*": ["src/api/*"],
+      "@atlas/contracts": ["src/contracts"],
+      "@atlas/contracts/*": ["src/contracts/*"],
+      "@atlas/shared": ["src/shared"],
+      "@atlas/shared/*": ["src/shared/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
