@@ -7,6 +7,83 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.2.0] — 2026-05-26
+
+### Added — Xeekrs UI library migration (31 net new components)
+
+Brought the full Xeekrs library page into Atlas, rewritten to match
+Atlas conventions (no `bg-[var(--…)]` arbitrary values in Tailwind
+classes; named utilities only).
+
+**Foundations & brand (8):** Full 10-step color ramps as named ramps
+(`stone`, `lavender`, `earth`, `emerald`, `canary`, `pink`, `orange`)
+exposed as Tailwind utilities (`bg-lavender-500`, `text-earth-700`, …).
+New token groups: `chart-1..5`, `skill`, `sidebar`,
+`browseHumanServices`, `spotlight`, `jobAiGradients` (4 named
+gradients). New components: `BrandLogo` (8 SVG variants bundled),
+`BrandSwatch`, `BrandBoard`, `ColorScale`, `TypographyScale`,
+`GradientToken`, `VoiceAndTone`.
+
+**Shell & chrome (13):** `TopBar` (slot-based desktop header),
+`MobileTopBar`, `MegaSearch`, `SubNav`, `PageBack` (polymorphic anchor
+/ button), `AccountMenu` (expanded + collapsed rail),
+`SiteSwitcherTrigger`, `DisclosureBar`, `ConsentAlertBar` (staff +
+client perspectives), `BrowseHubCard` (hub + mainSpace variants),
+`CoverImageHero` (none / dark / gradient tones), `SearchToolbar`,
+`AlertBar` (shell-level top banner).
+
+**Recruitment (10):** `MatchDiamond` + match-level helpers,
+`ReadinessBadge` (4 built-in stages + extensible),
+`QuickActionButton` (polymorphic with 3 label modes),
+`InterviewPipelineStepper` (decoupled from app status types),
+`ProfileCardToolbar`, `ProfileIdentityWell` (with anonymized state),
+`AnonymousProfileCard` (composition), `ApplicantDocumentMiniCard`,
+`ContactInfoButton` (candidate / company audiences), `FilterSection`.
+
+**Posting flow (7):** `PostingStepper` (wraps generic `Stepper`),
+`EntryPathCards`, `TemplateCard`, `AiGeneratedBadge`, `InlineAiAssist`,
+`QualityScorePanel`, `InternalNotesField`. `SkillTagInput` flagged as
+alias for existing `TagsInput`.
+
+**Other (5):** `Chip` (raw HeroUI Chip — kept side-by-side with
+`Badge` per human reconciliation), `BulletinRow`, `PromotionCard` (4
+tones using `jobAiGradients`), `ColumnSelector`, `ResizablePanel`
+(+ `ResizablePanelGroup` + `ResizableHandle`).
+
+### Changed
+
+- `text-xs` Tailwind utility now defaults to 16px (Xeekrs's
+  readability floor) — was 12px.
+- Atlas Tailwind preset (`preset-tokens-only.ts`) now exposes all 7
+  brand ramps as named utilities plus `chart-N`, `skill`, `sidebar`,
+  `spotlight`, `browseHumanServices`.
+- `package.json`: `react-resizable-panels` declared as optional peer
+  dep (mirrors `vaul` / `sonner` / `recharts` / `embla-carousel-react`).
+- `package.json` `files` field now publishes `src/assets/brand` (logo
+  SVGs) and `docs/MIGRATION-CONFLICTS.md`.
+
+### Docs
+
+- `docs/MIGRATION-CONFLICTS.md` — full per-component migration log,
+  conflict policy, reconciliation decisions, and deferral list.
+- `docs/COMPONENT-INVENTORY.json` — auto-generated (run
+  `npm run docs:inventory`). 125 component folders / 394 exports.
+- `playground/docs/SOP-feature-development.md` — appended v0.2
+  component update section.
+- `scripts/gen-component-inventory.mjs` — new tooling script.
+
+### Notes
+
+- Atlas's `Badge` and `Chip` both ship as distinct primitives.
+  `Badge` is the branded, opinionated pill (default Atlas styling);
+  `Chip` exposes the raw HeroUI Chip API. Decision logged in the
+  migration manifest.
+- App-level surfaces (~30 `*Route` page components, full dashboards,
+  domain modals, marketing layout templates, specialized recruitment
+  compositions, messaging compositions) are explicitly deferred —
+  they belong in consuming apps, not the design system. See the
+  manifest's "Permanently deferred" section.
+
 ## [Unreleased]
 
 ### Component library — 108 components across 18 categories

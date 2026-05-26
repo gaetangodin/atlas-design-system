@@ -84,7 +84,8 @@ for (const stmt of merged) {
 }
 
 const inventory = {
-  generatedAt: new Date().toISOString(),
+  // Deliberately omitting a timestamp here so CI's surface-drift gate
+  // (diff against the checked-in snapshot) doesn't flag every run.
   componentCount: components.size,
   totalExports: Array.from(components.values()).reduce(
     (acc, c) => acc + c.components.length + c.types.length,

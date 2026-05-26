@@ -374,9 +374,8 @@ describe("v0.2 migration smoke — Brand & data utilities", () => {
     expect(screen.getByText("1/2")).toBeInTheDocument();
   });
 
-  // Skipped: react-resizable-panels v4 needs ResizeObserver, which jsdom
-  // doesn't ship. Real-render coverage lives in the playground gallery.
-  it.skip("ResizablePanelGroup renders its panels", () => {
+  // jsdom doesn't ship ResizeObserver; vitest.setup.ts polyfills it.
+  it("ResizablePanelGroup renders its panels", () => {
     render(
       <ResizablePanelGroup orientation="horizontal" defaultLayout={{ left: 50, right: 50 }}>
         <ResizablePanel id="left">

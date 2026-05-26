@@ -37,3 +37,20 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      # Surface-drift guard — regenerate the component inventory and fail
+      # the build if it differs from the checked-in snapshot. Prevents
+      # silent additions / removals of the public surface.
+      - name: Regenerate component inventory
+        run: pnpm docs:inventory
+
+      - name: Fail if inventory drifted
+        run: |
+          if ! git diff --quiet -- docs/COMPONENT-INVENTORY.json; then
+            echo "::error::Component inventory drifted from the checked-in snapshot."
+            echo "Run 'pnpm docs:inventory' locally and commit the updated docs/COMPONENT-INVENTORY.json."
+            echo ""
+            echo "Diff:"
+            git --no-pager diff -- docs/COMPONENT-INVENTORY.json
+            exit 1
+          fi

@@ -46,7 +46,7 @@ function pickForegroundForHex(hex: string): string {
   // need dark text; deeper steps get white. Good enough for swatch
   // labels; not for production a11y decisions.
   const m = /^#([0-9a-f]{6})$/i.exec(hex.trim());
-  if (!m) return "#0C2120";
+  if (!m || !m[1]) return "#0C2120";
   const n = parseInt(m[1], 16);
   const r = (n >> 16) & 0xff;
   const g = (n >> 8) & 0xff;
