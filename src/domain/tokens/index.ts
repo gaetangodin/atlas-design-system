@@ -1,6 +1,22 @@
 export { tokens, colorVar, fallbackPalette } from "./colors";
 export type { TokenKey } from "./colors";
 
+export {
+  stone,
+  lavender,
+  earth,
+  emerald,
+  canary,
+  pink,
+  orange,
+  chart,
+  skill,
+  sidebar,
+  browseHumanServices,
+  colorRamps,
+} from "./colorRamps";
+export type { ColorRamp, ColorRampName, RampStep } from "./colorRamps";
+
 export { fontFamilyVars, fontSizes, fontWeights, textStyles } from "./typography";
 export type { TextStyle } from "./typography";
 

@@ -16,6 +16,10 @@ export const INTENT_COLORS: readonly IntentColor[] = [
 ] as const;
 
 export const PLAYGROUND_NAV: readonly PlaygroundNavItem[] = [
+  { id: "foundations", label: "Foundations & brand" },
+  { id: "shell-chrome", label: "Shell & chrome" },
+  { id: "topbar", label: "TopBar & shells" },
+  { id: "recruitment", label: "Recruitment" },
   { id: "buttons", label: "Buttons" },
   { id: "cards", label: "Cards & stats" },
   { id: "badges", label: "Badges" },

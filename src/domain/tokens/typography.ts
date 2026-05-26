@@ -19,7 +19,9 @@ export const fontFamilyVars = {
 } as const;
 
 export const fontSizes = {
-  xs: { size: "var(--text-xs, 12px)", lineHeight: "16px" },
+  // Xeekrs sets `--text-xs: 16px` as a deliberate readability floor for
+  // caption / muted helper copy — the fallback mirrors that decision.
+  xs: { size: "var(--text-xs, 16px)", lineHeight: "1.25rem" },
   sm: { size: "var(--text-sm, 14px)", lineHeight: "20px" },
   base: { size: "var(--text-base, 16px)", lineHeight: "24px" },
   lg: { size: "var(--text-lg, 18px)", lineHeight: "28px" },

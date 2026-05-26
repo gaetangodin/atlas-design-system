@@ -15,7 +15,25 @@
  */
 
 import type { Config } from "tailwindcss";
-import { spacing, radius, shadows, fontFamilyVars, durations, easings } from "../../domain/tokens";
+import {
+  spacing,
+  radius,
+  shadows,
+  fontFamilyVars,
+  durations,
+  easings,
+  stone,
+  lavender,
+  earth,
+  emerald,
+  canary,
+  pink,
+  orange,
+  chart,
+  skill,
+  sidebar,
+  browseHumanServices,
+} from "../../domain/tokens";
 
 /** Color utilities use `rgb(var(--X-rgb) / <alpha-value>)` pattern so
  * Tailwind alpha modifiers work — matches Xeekrs's globals.css contract. */
@@ -80,6 +98,38 @@ export const atlasPresetTokensOnly: Partial<Config> = {
           background: rgbVar("input-background"),
         },
         ring: rgbVar("ring"),
+
+        /* ----------------------------------------------------------- */
+        /* Named brand ramps (Xeekrs).                                  */
+        /* Surfaced as static palettes so utilities like                */
+        /* `bg-lavender-500` resolve at build time — NO `[var(--X)]`    */
+        /* arbitrary values in app code.                                */
+        /* ----------------------------------------------------------- */
+        stone,
+        lavender,
+        earth,
+        emerald,
+        canary,
+        pink,
+        orange,
+
+        /* Extended palettes. */
+        chart,
+        skill: {
+          DEFAULT: skill.DEFAULT,
+          light: skill.light,
+        },
+        sidebar: {
+          DEFAULT: sidebar.DEFAULT,
+          foreground: sidebar.foreground,
+          primary: sidebar.primary,
+          "primary-foreground": sidebar.primaryForeground,
+          accent: sidebar.accent,
+          "accent-foreground": sidebar.accentForeground,
+          border: sidebar.border,
+          ring: sidebar.ring,
+        },
+        browseHumanServices,
       },
       spacing,
       borderRadius: {
@@ -106,6 +156,11 @@ export const atlasPresetTokensOnly: Partial<Config> = {
         heading: [fontFamilyVars.heading],
         body: [fontFamilyVars.body],
         sans: [fontFamilyVars.base],
+      },
+      fontSize: {
+        // Xeekrs raises `text-xs` to 16px deliberately — caption /
+        // helper copy stays readable. Other steps inherit Tailwind core.
+        xs: ["var(--text-xs, 16px)", { lineHeight: "1.25rem" }],
       },
       transitionDuration: {
         fast: durations.fast,

@@ -11,6 +11,10 @@ import { usePlaygroundShowcase } from "../hooks/usePlaygroundShowcase";
 import { PlaygroundShell } from "./PlaygroundShell";
 import { PlaygroundEmptyState } from "./PlaygroundEmptyState";
 import { PlaygroundPageSkeleton } from "./PlaygroundPageSkeleton";
+import { FoundationsSection } from "./sections/FoundationsSection";
+import { ShellChromeSection } from "./sections/ShellChromeSection";
+import { TopBarSection } from "./sections/TopBarSection";
+import { RecruitmentSection } from "./sections/RecruitmentSection";
 import { ButtonsSection } from "./sections/ButtonsSection";
 import { CardsSection } from "./sections/CardsSection";
 import { BadgesSection } from "./sections/BadgesSection";
@@ -55,6 +59,10 @@ export function PlaygroundPage() {
     <PlaygroundShell navItems={showcase.items} version="v0.1.0">
       <Toaster />
       <div className="space-y-12 lg:space-y-14">
+        <FoundationsSection />
+        <ShellChromeSection />
+        <TopBarSection />
+        <RecruitmentSection />
         <ButtonsSection />
         <CardsSection />
         <BadgesSection />

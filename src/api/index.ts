@@ -1,11 +1,30 @@
 // API layer — public React component surface.
 
+// Brand
+export { BrandLogo } from "./components/BrandLogo";
+export type { BrandLogoProps, BrandLogoVariant } from "./components/BrandLogo";
+export { BrandSwatch } from "./components/BrandSwatch";
+export type { BrandSwatchProps } from "./components/BrandSwatch";
+export { BrandBoard } from "./components/BrandBoard";
+export type { BrandBoardProps } from "./components/BrandBoard";
+export { ColorScale } from "./components/ColorScale";
+export type { ColorScaleProps } from "./components/ColorScale";
+export { TypographyScale } from "./components/TypographyScale";
+export type {
+  TypographyScaleProps,
+  TypographyScaleVariant,
+} from "./components/TypographyScale";
+
 // Core
 export { Button } from "./components/Button";
 export { Input, HEROUI_OUTSIDE_LABEL_PLACEHOLDER } from "./components/Input";
 export { Textarea } from "./components/Textarea";
 export { Card, CardBody, CardHeader, CardFooter } from "./components/Card";
 export { Badge } from "./components/Badge";
+// Chip — new in batch 2. Atlas's Badge IS HeroUI's Chip under the hood;
+// see docs/MIGRATION-CONFLICTS.md for the human-reconciliation note.
+export { Chip } from "./components/Chip";
+export type { ChipProps } from "./components/Chip";
 export { Link } from "./components/Link";
 
 // Forms
@@ -90,6 +109,48 @@ export { Sidebar } from "./components/Sidebar";
 export { BottomNav } from "./components/BottomNav";
 export { Stepper } from "./components/Stepper";
 export { VerticalTabs, VerticalTab } from "./components/VerticalTabs";
+
+// Shell & chrome (batch 3 + 3.5)
+export { TopBar } from "./components/TopBar";
+export type { TopBarProps } from "./components/TopBar";
+export { MobileTopBar } from "./components/MobileTopBar";
+export type { MobileTopBarProps } from "./components/MobileTopBar";
+export { MegaSearch } from "./components/MegaSearch";
+export type { MegaSearchProps } from "./components/MegaSearch";
+export { PageBack } from "./components/PageBack";
+export type { PageBackProps, PageBackVariant } from "./components/PageBack";
+export { SubNav } from "./components/SubNav";
+export type { SubNavProps, SubNavPosition } from "./components/SubNav";
+export { AccountMenu } from "./components/AccountMenu";
+export type { AccountMenuProps, AccountMenuItem } from "./components/AccountMenu";
+export { SiteSwitcherTrigger } from "./components/SiteSwitcherTrigger";
+export type {
+  SiteSwitcherTriggerProps,
+  SiteSwitcherTriggerVariant,
+} from "./components/SiteSwitcherTrigger";
+export { DisclosureBar } from "./components/DisclosureBar";
+export type { DisclosureBarProps, DisclosureBarVariant } from "./components/DisclosureBar";
+
+// Recruitment primitives (batch 4)
+export {
+  MatchDiamond,
+  matchLevelFromRequiredOverlap,
+  matchLevelLabel,
+  matchLevelPillClass,
+} from "./components/MatchDiamond";
+export type { MatchDiamondProps, MatchLevel } from "./components/MatchDiamond";
+export { ReadinessBadge, readinessStageClassName } from "./components/ReadinessBadge";
+export type { ReadinessBadgeProps, ReadinessStage } from "./components/ReadinessBadge";
+export { QuickActionButton } from "./components/QuickActionButton";
+export type { QuickActionLabelMode } from "./components/QuickActionButton";
+export { InterviewPipelineStepper } from "./components/InterviewPipelineStepper";
+export type {
+  InterviewPipelineStepperProps,
+  PipelineStage,
+  PipelineState,
+  PipelineClosureRow,
+  PipelineClosureTone,
+} from "./components/InterviewPipelineStepper";
 
 // Dates
 export {
