@@ -205,6 +205,30 @@ export const browseHumanServices = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Job AI gradients — used on AI-driven recruitment surfaces (job      */
+/* match overlay, AI-suggested copy backdrop, AI assist banner). Each  */
+/* entry is a CSS `linear-gradient(...)` string ready to drop into     */
+/* `backgroundImage` style or a Tailwind `bg-[--token]` reference via  */
+/* the Atlas preset.                                                   */
+/* ------------------------------------------------------------------ */
+export const jobAiGradients = {
+  /** Subtle lavender wash for backdrop pills, suggestion banners. */
+  subtle:
+    "linear-gradient(135deg, rgba(163, 181, 237, 0.18) 0%, rgba(163, 181, 237, 0.06) 60%, transparent 100%)",
+  /** Vivid lavender-to-canary diagonal for AI feature highlights. */
+  spark:
+    "linear-gradient(135deg, #A3B5ED 0%, #C6D9FF 35%, #EDFF7D 100%)",
+  /** Deep earth-to-lavender for hero/illustration cards. */
+  hero:
+    "linear-gradient(135deg, #0C2120 0%, #2D403F 45%, #485688 100%)",
+  /** Warm cream-to-canary for "spotlight / featured" rails. */
+  warmth:
+    "linear-gradient(135deg, #F8F8F2 0%, #F3FFAB 100%)",
+} as const;
+
+export type JobAiGradient = keyof typeof jobAiGradients;
+
+/* ------------------------------------------------------------------ */
 /* Registry — all ramps in one map, for tooling / token-doc components. */
 /* ------------------------------------------------------------------ */
 export const colorRamps = {

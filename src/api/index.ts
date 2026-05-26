@@ -130,6 +130,37 @@ export type {
 } from "./components/SiteSwitcherTrigger";
 export { DisclosureBar } from "./components/DisclosureBar";
 export type { DisclosureBarProps, DisclosureBarVariant } from "./components/DisclosureBar";
+export { ConsentAlertBar } from "./components/ConsentAlertBar";
+export type { ConsentAlertBarProps, ConsentPerspective } from "./components/ConsentAlertBar";
+export { BrowseHubCard } from "./components/BrowseHubCard";
+export type { BrowseHubCardProps, BrowseHubCardVariant } from "./components/BrowseHubCard";
+
+// Posting flow primitives (batch 5)
+export { AiGeneratedBadge } from "./components/AiGeneratedBadge";
+export type {
+  AiGeneratedBadgeProps,
+  AiGeneratedBadgeTone,
+} from "./components/AiGeneratedBadge";
+export { EntryPathCards } from "./components/EntryPathCards";
+export type { EntryPathCardsProps, EntryPathOption } from "./components/EntryPathCards";
+export { TemplateCard } from "./components/TemplateCard";
+export type { TemplateCardProps } from "./components/TemplateCard";
+export { QualityScorePanel } from "./components/QualityScorePanel";
+export type {
+  QualityScorePanelProps,
+  QualityIssue,
+  QualityIssueStatus,
+} from "./components/QualityScorePanel";
+export { InternalNotesField } from "./components/InternalNotesField";
+export type { InternalNotesFieldProps } from "./components/InternalNotesField";
+export { InlineAiAssist } from "./components/InlineAiAssist";
+export type { InlineAiAssistProps, AiAssistSuggestion } from "./components/InlineAiAssist";
+
+// Brand polish (batch 7)
+export { GradientToken } from "./components/GradientToken";
+export type { GradientTokenProps } from "./components/GradientToken";
+export { VoiceAndTone } from "./components/VoiceAndTone";
+export type { VoiceAndToneProps, VoicePair } from "./components/VoiceAndTone";
 
 // Recruitment primitives (batch 4)
 export {

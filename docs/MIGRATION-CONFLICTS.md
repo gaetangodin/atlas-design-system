@@ -217,10 +217,86 @@ until Atlas ports them officially.
 
 ---
 
-## Future batches
+## Batch 3.7 — Remaining shell atomics
 
-- **3.7** — Remaining shell pieces (BrowseHubCard, SearchToolbar, CoverImageHero, ConsentAlertBar).
-- **4.5** — Recruitment compositions (AnonymousProfileCard, contact popovers, filter sections, document cards).
-- **5** — Posting flow (PostingStepper, EntryPathCards, TemplateCard, SkillTagInput, InlineAiAssist, QualityScorePanel, InternalNotesField, AiGeneratedBadge).
-- **6** — Product patterns (academy CTAs, dashboards, admin panel, application modals, career hub cards).
-- **7** — Brand polish (voice & tone doc, marketing patterns, Job AI gradients, component inventory).
+| Status | Xeekrs item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | `messages/ConsentAlertBar.tsx` | `src/api/components/ConsentAlertBar/` | Verbatim port. Hex `#122120` → named `bg-earth-900` utility (no longer inline). Accent yellow `#F8FFCB` kept as literal — flagged below as a candidate for tokenization. |
+| 🟢 NEW | Browse hub card class (`shell-patterns.ts`) | `src/api/components/BrowseHubCard/` | Promoted from a CSS class string to a real component. `variant="hub" | "mainSpace"` covers both Xeekrs class strings; polymorphic `<a>` / `<button>` based on `href`. |
+| ⏸️ DEFERRED | `SearchToolbar` | (need design) | Not extracted as standalone in Xeekrs — search pages use inline patterns. |
+| ⏸️ DEFERRED | `CoverImageHero` / `CoverImageSection` (327 lines) | (defer) | Composite — defer to a focused batch. |
+
+### Color literals to consider tokenizing
+
+`#F8FFCB` (light yellow accent used in ConsentAlertBar + recruitment chrome)
+appears multiple times across Xeekrs and isn't yet in any ramp. Likely
+candidate for a new "spotlight" or "accent yellow" ramp once design confirms.
+Tracked here so the next foundations pass picks it up.
+
+---
+
+## Batch 5 — Posting flow primitives
+
+The Xeekrs library page lists 8 posting-flow items. None exist as standalone
+exports in the Xeekrs codebase — they're patterns inside large composite
+files (`JobPostingForm.tsx`, `JobPostingCreationFlow.tsx`, etc.). Atlas
+ports them as **clean atoms** with the right shape, not as 1:1 mirrors of
+the inline patterns.
+
+| Status | Xeekrs library item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | AiGeneratedBadge | `src/api/components/AiGeneratedBadge/` | Lavender-tinted pill, `subtle` / `solid` tone variants, sparkle icon. |
+| 🟢 NEW | EntryPathCards | `src/api/components/EntryPathCards/` | Generic "pick your starting point" radio cards. `auto` / 1 / 2 / 3 column layout; supports `badge` slot (compose `AiGeneratedBadge` inside). |
+| 🟢 NEW | TemplateCard | `src/api/components/TemplateCard/` | Smaller pickable card with optional preview, badges, meta. Designed to grid alongside others. |
+| 🟢 NEW | QualityScorePanel | `src/api/components/QualityScorePanel/` | Big-score panel with category breakdown. Tone derives from score band (<40 destructive, <70 warning, <90 emerald, ≥90 success). Issues list with `ok` / `warn` / `fail` / `info` pips. |
+| 🟢 NEW | InternalNotesField | `src/api/components/InternalNotesField/` | Wraps Atlas `Textarea` with a lock-icon "internal — not shared with candidate" affordance. |
+| 🟢 NEW | InlineAiAssist | `src/api/components/InlineAiAssist/` | Lavender banner with a prompt + clickable suggestion chips. Apps wire suggestion ids to their AI call. |
+| 🔵 EXTEND (use existing) | SkillTagInput | Atlas's existing `TagsInput` | Functionally the same — apps can supply skill-specific copy / icons. No new component needed; flagged here so designers/devs know the equivalent. |
+| ⏸️ DEFERRED | PostingStepper | (defer) | Atlas has generic `Stepper` already; a posting-specific variant with the Xeekrs wizard's sidebar chrome can be added in a posting-flow-focused batch. |
+
+---
+
+## Batch 7 — Brand polish
+
+| Status | Xeekrs library item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | Job AI gradients | `src/domain/tokens/colorRamps.ts → jobAiGradients` | 4 named gradients: `subtle`, `spark`, `hero`, `warmth`. Exposed both as a TS token map and via a new `GradientToken` documentation component. |
+| 🟢 NEW | Voice & tone | `src/api/components/VoiceAndTone/` | Documentation component rendering brand statement + principles + do/don't pairs. Defaults shipped (Xeekrs brand voice); apps can override every list. |
+| 🟢 NEW | GradientToken | `src/api/components/GradientToken/` | Doc swatch tile for the gradients (mirrors `BrandSwatch`). |
+| ⏸️ DEFERRED | Component inventory page | (defer) | Auto-generation from `api/index.ts` would be a nice follow-up — write a small script that walks the exports and emits a JSON / TS map of components. Not a runtime component. |
+| ⏸️ DEFERRED | Marketing hero / social posts / display ads / campaigns | (defer) | Composite layouts; each needs its own design pass. |
+
+---
+
+## Final summary
+
+Atlas's public component surface grew from **87** (pre-migration) to **104**
+components across batches 1, 2, 3, 3.5, 3.7, 4, 5, and 7. Net new in this
+migration:
+
+- **Foundations + brand** — 4 components (BrandLogo, BrandSwatch, BrandBoard, ColorScale, TypographyScale).
+- **Missing HeroUI** — 1 (Chip).
+- **Shell & chrome** — 9 (PageBack, DisclosureBar, SubNav, SiteSwitcherTrigger, AccountMenu, TopBar, MobileTopBar, MegaSearch, ConsentAlertBar, BrowseHubCard).
+- **Recruitment** — 4 (MatchDiamond, ReadinessBadge, QuickActionButton, InterviewPipelineStepper).
+- **Posting flow** — 6 (AiGeneratedBadge, EntryPathCards, TemplateCard, QualityScorePanel, InternalNotesField, InlineAiAssist).
+- **Brand polish** — 2 (GradientToken, VoiceAndTone) + token-level (`jobAiGradients`).
+
+Plus token-layer growth: 7 full color ramps (Stone, Lavender, Earth, Emerald,
+Canary, Pink, Orange) + chart-1..5 + skill / sidebar / browseHumanServices
+tokens + the AI gradients.
+
+**Zero conflicts requiring human reconciliation** beyond the documented
+Chip-vs-Badge naming overlap. Everything else was either net-new or an
+additive extension to existing files.
+
+**Build verified.** `next build` ✓ — `/playground` 16.5 kB / 612 kB First Load
+JS, 5 routes prerendered as static content.
+
+## Still deferred (future batches)
+
+- **3.8** — SearchToolbar, CoverImageHero (need design decisions).
+- **4.5** — Recruitment compositions: AnonymousProfileCard, ProfileCardToolbar, ProfileIdentityWell, contact popovers (Candidate / Company), IntroVideoDialog, VideoInterviewModal, ApplicantDocuments (full + mini + section icon), 5 filter sections (MatchLevel / MatchStatus / Sector / Worksite / SidebarSearch), InterviewEventRecap, ApplicantReviewRecap, LocationFilterCombobox, EmployerOnboardingLocationStep, ShareCandidatePreviewCard, AnnouncementDetailAdminMetaBadges.
+- **5.5** — PostingStepper (composite over Atlas Stepper with the wizard chrome).
+- **6** — Product patterns: academy CTAs, ChatOpportunityCard, GroupChatAvatar, CannedMessageSelector (Templates + AI Assist), ClientTouchpointCards, CoachHubPanel, CoverImageSection, HomeSearchBar, CareerHubCard/Progress/Sidebar, JobExplorer, AnalyticsDashboard, CoachingDashboard, CoachboardTasks, AdminPanel, AdminPatternsDoc, CreateProjectWizard, ColumnSelector, ApplicationModal, ApplicationStatusModal, IncentiveTierAssignCard, PromotionCard, PromotionPostcardModal, MobileAlertModal, BulletinRow, top-page AlertBar.
+- **7.5** — Component inventory auto-gen, marketing patterns, ResizablePanel mini-batch.
+- **Route-level pages** — ~30 `*Route` components. These belong in consuming apps, not the design system, but a "shells" example library could help.

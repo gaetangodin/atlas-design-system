@@ -14,8 +14,9 @@ export {
   sidebar,
   browseHumanServices,
   colorRamps,
+  jobAiGradients,
 } from "./colorRamps";
-export type { ColorRamp, ColorRampName, RampStep } from "./colorRamps";
+export type { ColorRamp, ColorRampName, RampStep, JobAiGradient } from "./colorRamps";
 
 export { fontFamilyVars, fontSizes, fontWeights, textStyles } from "./typography";
 export type { TextStyle } from "./typography";
