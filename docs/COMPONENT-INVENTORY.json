@@ -1,7 +1,31 @@
 {
-  "componentCount": 138,
-  "totalExports": 446,
+  "componentCount": 152,
+  "totalExports": 586,
   "components": [
+    {
+      "folder": "AcademyPatterns",
+      "components": [
+        "AcademyMyLearningCards",
+        "AcademyTrainingOfferCta",
+        "CoachHubPanel",
+        "CareerHubCard",
+        "CareerHubProgress",
+        "CareerHubSidebar",
+        "HomeSearch"
+      ],
+      "types": [
+        "MyLearningEntry",
+        "AcademyMyLearningCardsProps",
+        "AcademyTrainingOfferCtaProps",
+        "CoachHubPanelProps",
+        "CareerHubCardProps",
+        "CareerHubProgressMilestone",
+        "CareerHubProgressProps",
+        "CareerHubSidebarItem",
+        "CareerHubSidebarProps",
+        "HomeSearchProps"
+      ]
+    },
     {
       "folder": "Accordion",
       "components": [
@@ -20,6 +44,44 @@
       "types": [
         "AccountMenuProps",
         "AccountMenuItem"
+      ]
+    },
+    {
+      "folder": "ActionButton",
+      "components": [
+        "ActionButton"
+      ],
+      "types": [
+        "ActionButtonProps"
+      ]
+    },
+    {
+      "folder": "AdminPatterns",
+      "components": [
+        "AdminConfigPanel",
+        "CoachboardTasksTab",
+        "EmployerHubBusinessSwitcher",
+        "EmployerHubDashboardContent",
+        "SiteSwitcherModal",
+        "ProjectOverviewShell",
+        "ProjectFilesShell",
+        "ReportsViewShell"
+      ],
+      "types": [
+        "AdminConfigSection",
+        "AdminConfigPanelProps",
+        "CoachboardTaskRow",
+        "CoachboardTasksTabProps",
+        "EmployerHubBusiness",
+        "EmployerHubBusinessSwitcherProps",
+        "EmployerHubDashboardContentProps",
+        "SiteEntry",
+        "SiteSwitcherModalProps",
+        "ProjectOverviewShellProps",
+        "ProjectFileRow",
+        "ProjectFilesShellProps",
+        "ReportTile",
+        "ReportsViewShellProps"
       ]
     },
     {
@@ -86,6 +148,15 @@
       ],
       "types": [
         "ApplicationModalProps"
+      ]
+    },
+    {
+      "folder": "AspectRatio",
+      "components": [
+        "AspectRatio"
+      ],
+      "types": [
+        "AspectRatioProps"
       ]
     },
     {
@@ -309,6 +380,33 @@
       ],
       "types": [
         "CarouselProps"
+      ]
+    },
+    {
+      "folder": "CaseloadPatterns",
+      "components": [
+        "CaseloadCard",
+        "CaseloadCategoryTable",
+        "CaseloadTaskRow",
+        "CaseloadOverviewHubSections",
+        "CaseworkerOnBehalfBar",
+        "ProfileQuickView",
+        "TeamMembersTable",
+        "LeadsScreen",
+        "SupportServicesBrowseTile"
+      ],
+      "types": [
+        "CaseloadCardProps",
+        "CaseloadCategoryTableProps",
+        "CaseloadTaskRowProps",
+        "CaseloadHubSection",
+        "CaseloadOverviewHubSectionsProps",
+        "CaseworkerOnBehalfBarProps",
+        "ProfileQuickViewProps",
+        "CaseloadTeamMember",
+        "TeamMembersTableProps",
+        "LeadsScreenProps",
+        "SupportServicesBrowseTileProps"
       ]
     },
     {
@@ -624,6 +722,22 @@
       ]
     },
     {
+      "folder": "FormExtras",
+      "components": [
+        "LanguageSwitcher",
+        "AboutRoleRichTextEditor",
+        "ResponsibilitiesBulletEditor",
+        "SupportTicketForm"
+      ],
+      "types": [
+        "LanguageOption",
+        "LanguageSwitcherProps",
+        "AboutRoleRichTextEditorProps",
+        "ResponsibilitiesBulletEditorProps",
+        "SupportTicketFormProps"
+      ]
+    },
+    {
       "folder": "GradientToken",
       "components": [
         "GradientToken"
@@ -639,6 +753,15 @@
       ],
       "types": [
         "HeroProps"
+      ]
+    },
+    {
+      "folder": "IconButton",
+      "components": [
+        "IconButton"
+      ],
+      "types": [
+        "IconButtonProps"
       ]
     },
     {
@@ -779,6 +902,23 @@
       ]
     },
     {
+      "folder": "MessagingExtras",
+      "components": [
+        "ChatConnectionReceivedBar",
+        "ClientInboundConnectionInviteCards",
+        "StaffConnectionRequestsManageTable",
+        "MessagesWorkspace"
+      ],
+      "types": [
+        "ChatConnectionReceivedBarProps",
+        "ClientInboundConnectionInviteCardsProps",
+        "InboundInvite",
+        "StaffConnectionRequestsManageTableProps",
+        "ConnectionRequestRow",
+        "MessagesWorkspaceProps"
+      ]
+    },
+    {
       "folder": "MessagingPatterns",
       "components": [
         "ChatOpportunityCard",
@@ -795,6 +935,41 @@
         "ClientTouchpointCardsProps",
         "ClientTouchpoint",
         "TouchpointKind"
+      ]
+    },
+    {
+      "folder": "MiscPrimitives",
+      "components": [
+        "CollapsibleCard",
+        "MiniMonthCalendar",
+        "ResponsiveTabsList",
+        "TabBar"
+      ],
+      "types": [
+        "CollapsibleCardProps",
+        "MiniMonthCalendarProps",
+        "ResponsiveTab",
+        "ResponsiveTabsListProps",
+        "TabBarItem",
+        "TabBarProps"
+      ]
+    },
+    {
+      "folder": "MobileBits",
+      "components": [
+        "MobileMenu",
+        "MobileSearch",
+        "MobileSectionTabPicker",
+        "SwipeHandler",
+        "PullToRefresh"
+      ],
+      "types": [
+        "MobileMenuProps",
+        "MobileSearchProps",
+        "MobileSectionTabPickerOption",
+        "MobileSectionTabPickerProps",
+        "SwipeHandlerProps",
+        "PullToRefreshProps"
       ]
     },
     {
@@ -827,6 +1002,27 @@
       ],
       "types": [
         "ModalProps"
+      ]
+    },
+    {
+      "folder": "ModalExtras",
+      "components": [
+        "SlideInModal",
+        "ResourceCreationModal",
+        "UnsplashImagePicker",
+        "EmployerOnboardingModal",
+        "JobSeekerPostingPreviewModal",
+        "JobPostingReviewRecap"
+      ],
+      "types": [
+        "SlideInModalProps",
+        "ResourceCreationModalProps",
+        "UnsplashImage",
+        "UnsplashImagePickerProps",
+        "EmployerOnboardingModalProps",
+        "JobSeekerPostingPreviewModalProps",
+        "JobPostingReviewRecapItem",
+        "JobPostingReviewRecapProps"
       ]
     },
     {
@@ -879,6 +1075,21 @@
       "types": [
         "PageBackProps",
         "PageBackVariant"
+      ]
+    },
+    {
+      "folder": "PageHelpers",
+      "components": [
+        "PlaceholderPage",
+        "ProfileSectionCard",
+        "WorkPageShell",
+        "BusinessAvatarMark"
+      ],
+      "types": [
+        "PlaceholderPageProps",
+        "ProfileSectionCardProps",
+        "WorkPageShellProps",
+        "BusinessAvatarMarkProps"
       ]
     },
     {
@@ -1110,6 +1321,23 @@
       ]
     },
     {
+      "folder": "SidePanels",
+      "components": [
+        "NotificationsPanel",
+        "RemindersPanel",
+        "MessagesPanel",
+        "RightSidebar",
+        "WorkspaceTakeoverPanel"
+      ],
+      "types": [
+        "NotificationsPanelProps",
+        "RemindersPanelProps",
+        "MessagesPanelProps",
+        "RightSidebarProps",
+        "WorkspaceTakeoverPanelProps"
+      ]
+    },
+    {
       "folder": "SiteSwitcherTrigger",
       "components": [
         "SiteSwitcherTrigger"
@@ -1145,6 +1373,16 @@
       "types": [
         "SortableTableProps",
         "SortableTableColumn"
+      ]
+    },
+    {
+      "folder": "SortButton",
+      "components": [
+        "SortButton"
+      ],
+      "types": [
+        "SortButtonProps",
+        "SortDirection"
       ]
     },
     {

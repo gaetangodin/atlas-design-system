@@ -439,3 +439,214 @@ export type { TeamGridProps, TeamMember } from "./components/TeamGrid";
 export type { AuthLayoutProps } from "./components/AuthLayout";
 export type { DashboardShellProps } from "./components/DashboardShell";
 export type { SettingsLayoutProps } from "./components/SettingsLayout";
+
+// ─────────────────────────────────────────────────────────────────────
+// v0.4 import — Group A (atoms/wrappers), Group B (domain compositions)
+// ─────────────────────────────────────────────────────────────────────
+
+// Group A — small buttons & ratio box
+export { ActionButton } from "./components/ActionButton";
+export type { ActionButtonProps } from "./components/ActionButton";
+export { IconButton } from "./components/IconButton";
+export type { IconButtonProps } from "./components/IconButton";
+export { SortButton } from "./components/SortButton";
+export type { SortButtonProps, SortDirection } from "./components/SortButton";
+export { AspectRatio } from "./components/AspectRatio";
+export type { AspectRatioProps } from "./components/AspectRatio";
+
+// Group A — side panels
+export {
+  NotificationsPanel,
+  RemindersPanel,
+  MessagesPanel,
+  RightSidebar,
+  WorkspaceTakeoverPanel,
+} from "./components/SidePanels";
+export type {
+  NotificationsPanelProps,
+  RemindersPanelProps,
+  MessagesPanelProps,
+  RightSidebarProps,
+  WorkspaceTakeoverPanelProps,
+} from "./components/SidePanels";
+
+// Group A — mobile interaction primitives
+export {
+  MobileMenu,
+  MobileSearch,
+  MobileSectionTabPicker,
+  SwipeHandler,
+  PullToRefresh,
+} from "./components/MobileBits";
+export type {
+  MobileMenuProps,
+  MobileSearchProps,
+  MobileSectionTabPickerOption,
+  MobileSectionTabPickerProps,
+  SwipeHandlerProps,
+  PullToRefreshProps,
+} from "./components/MobileBits";
+
+// Group A — page-shape helpers
+export {
+  PlaceholderPage,
+  ProfileSectionCard,
+  WorkPageShell,
+  BusinessAvatarMark,
+} from "./components/PageHelpers";
+export type {
+  PlaceholderPageProps,
+  ProfileSectionCardProps,
+  WorkPageShellProps,
+  BusinessAvatarMarkProps,
+} from "./components/PageHelpers";
+
+// Group A — form extras
+export {
+  LanguageSwitcher,
+  AboutRoleRichTextEditor,
+  ResponsibilitiesBulletEditor,
+  SupportTicketForm,
+} from "./components/FormExtras";
+export type {
+  LanguageOption,
+  LanguageSwitcherProps,
+  AboutRoleRichTextEditorProps,
+  ResponsibilitiesBulletEditorProps,
+  SupportTicketFormProps,
+} from "./components/FormExtras";
+
+// Group A — modal extras
+export {
+  SlideInModal,
+  ResourceCreationModal,
+  UnsplashImagePicker,
+  EmployerOnboardingModal,
+  JobSeekerPostingPreviewModal,
+  JobPostingReviewRecap,
+} from "./components/ModalExtras";
+export type {
+  SlideInModalProps,
+  ResourceCreationModalProps,
+  UnsplashImage,
+  UnsplashImagePickerProps,
+  EmployerOnboardingModalProps,
+  JobSeekerPostingPreviewModalProps,
+  JobPostingReviewRecapItem,
+  JobPostingReviewRecapProps,
+} from "./components/ModalExtras";
+
+// Group A — misc primitives
+export {
+  CollapsibleCard,
+  MiniMonthCalendar,
+  ResponsiveTabsList,
+  TabBar,
+} from "./components/MiscPrimitives";
+export type {
+  CollapsibleCardProps,
+  MiniMonthCalendarProps,
+  ResponsiveTab,
+  ResponsiveTabsListProps,
+  TabBarItem,
+  TabBarProps,
+} from "./components/MiscPrimitives";
+
+// Group B — caseload / staff patterns
+export {
+  CaseloadCard,
+  CaseloadCategoryTable,
+  CaseloadTaskRow,
+  CaseloadOverviewHubSections,
+  CaseworkerOnBehalfBar,
+  ProfileQuickView,
+  TeamMembersTable,
+  LeadsScreen,
+  SupportServicesBrowseTile,
+} from "./components/CaseloadPatterns";
+export type {
+  CaseloadCardProps,
+  CaseloadCategoryTableProps,
+  CaseloadTaskRowProps,
+  CaseloadHubSection,
+  CaseloadOverviewHubSectionsProps,
+  CaseworkerOnBehalfBarProps,
+  ProfileQuickViewProps,
+  TeamMember as CaseloadTeamMember,
+  TeamMembersTableProps,
+  LeadsScreenProps,
+  SupportServicesBrowseTileProps,
+} from "./components/CaseloadPatterns";
+
+// Group B — academy / career hub patterns
+export {
+  AcademyMyLearningCards,
+  AcademyTrainingOfferCta,
+  CoachHubPanel,
+  CareerHubCard,
+  CareerHubProgress,
+  CareerHubSidebar,
+  HomeSearch,
+} from "./components/AcademyPatterns";
+export type {
+  MyLearningEntry,
+  AcademyMyLearningCardsProps,
+  AcademyTrainingOfferCtaProps,
+  CoachHubPanelProps,
+  CareerHubCardProps,
+  CareerHubProgressMilestone,
+  CareerHubProgressProps,
+  CareerHubSidebarItem,
+  CareerHubSidebarProps,
+  HomeSearchProps,
+} from "./components/AcademyPatterns";
+
+// Group B — recruitment + work extras (large surface — barrel re-export)
+export * from "./components/RecruitmentExtras";
+
+// Group B — messaging extras
+export {
+  ChatConnectionReceivedBar,
+  ClientInboundConnectionInviteCards,
+  StaffConnectionRequestsManageTable,
+  MessagesWorkspace,
+} from "./components/MessagingExtras";
+export type {
+  ChatConnectionReceivedBarProps,
+  ClientInboundConnectionInviteCardsProps,
+  InboundInvite,
+  StaffConnectionRequestsManageTableProps,
+  ConnectionRequestRow,
+  MessagesWorkspaceProps,
+} from "./components/MessagingExtras";
+
+// Group B — admin / employer-hub / project view patterns
+export {
+  AdminConfigPanel,
+  CoachboardTasksTab,
+  EmployerHubBusinessSwitcher,
+  EmployerHubDashboardContent,
+  SiteSwitcherModal,
+  ProjectOverviewShell,
+  ProjectFilesShell,
+  ReportsViewShell,
+} from "./components/AdminPatterns";
+export type {
+  AdminConfigSection,
+  AdminConfigPanelProps,
+  CoachboardTaskRow,
+  CoachboardTasksTabProps,
+  EmployerHubBusiness,
+  EmployerHubBusinessSwitcherProps,
+  EmployerHubDashboardContentProps,
+  SiteEntry,
+  SiteSwitcherModalProps,
+  ProjectOverviewShellProps,
+  ProjectFileRow,
+  ProjectFilesShellProps,
+  ReportTile,
+  ReportsViewShellProps,
+} from "./components/AdminPatterns";
+
+// Group C — Page-suffixed templates (thin wrappers over Route shells).
+export * from "./components/NamedPages";

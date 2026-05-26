@@ -364,11 +364,69 @@ can use the generic shell directly and skip the named wrapper.
 
 ---
 
+## v0.4 — Groups A, B, C: full Xeekrs `src/components/` close-out
+
+After v0.3 landed the deferred dashboards / shells / compositions,
+v0.4 finishes off the remaining 80+ files in `Xeekrsmainapp/src/components/`.
+
+### Group A — reusable atoms & small wrappers
+
+| Status | Xeekrs item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | `ActionButton` | `components/ActionButton` | Labelled pill CTA distinct from Atlas `Button`; lavender or earth tone. |
+| 🟢 NEW | `IconButton` | `components/IconButton` | Small square icon-only button — flat / ghost / bordered. |
+| 🟢 NEW | `SortButton` (`SortDirection`) | `components/SortButton` | Table column sort affordance — asc / desc / none. |
+| 🟢 NEW | `AspectRatio` | `components/AspectRatio` | shadcn-style aspect box; `ratio = 16/9` default. |
+| 🟢 NEW | `NotificationsPanel`, `RemindersPanel`, `MessagesPanel`, `RightSidebar`, `WorkspaceTakeoverPanel` | `components/SidePanels` | All wrap a `PanelShell` with header / body / footer slots. |
+| 🟢 NEW | `MobileMenu`, `MobileSearch`, `MobileSectionTabPicker`, `SwipeHandler`, `PullToRefresh` | `components/MobileBits` | Mobile interaction primitives — touch-gesture wrappers + pull-to-refresh with threshold + indicator. |
+| 🟢 NEW | `PlaceholderPage`, `ProfileSectionCard`, `WorkPageShell`, `BusinessAvatarMark` | `components/PageHelpers` | Page-shape helpers. |
+| 🟢 NEW | `LanguageSwitcher`, `AboutRoleRichTextEditor`, `ResponsibilitiesBulletEditor`, `SupportTicketForm` | `components/FormExtras` | Form extras. |
+| 🟢 NEW | `SlideInModal`, `ResourceCreationModal`, `UnsplashImagePicker`, `EmployerOnboardingModal`, `JobSeekerPostingPreviewModal`, `JobPostingReviewRecap` | `components/ModalExtras` | Modal extras (`SlideInModal` uses `placement="bottom"`). |
+| 🟢 NEW | `CollapsibleCard`, `MiniMonthCalendar`, `ResponsiveTabsList`, `TabBar` | `components/MiscPrimitives` | Misc primitives. |
+
+### Group B — domain composition pattern files
+
+| Status | Xeekrs item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | Caseload patterns (`CaseloadCard`, `CaseloadCategoryTable`, `CaseloadTaskRow`, `CaseloadOverviewHubSections`, `CaseworkerOnBehalfBar`, `ProfileQuickView`, `TeamMembersTable`, `LeadsScreen`, `SupportServicesBrowseTile`) | `components/CaseloadPatterns` | 9 staff-side compositions. `TeamMember` re-exported as `CaseloadTeamMember` in the public API to avoid collision with `TeamGrid` types. |
+| 🟢 NEW | Academy / career-hub patterns (`AcademyMyLearningCards`, `AcademyTrainingOfferCta`, `CoachHubPanel`, `CareerHubCard`, `CareerHubProgress`, `CareerHubSidebar`, `HomeSearch`) | `components/AcademyPatterns` | 7 career-hub compositions with progress bars + milestone steppers. |
+| 🟢 NEW | Recruitment / work / posting (20+ surfaces) | `components/RecruitmentExtras` | Includes `RecruitmentAreaTabs`, `RecruitmentWorkspaceDestinationCards`, `TalentSupplyRadar`, `TasksTable`, `TaskDrilldownPanel` / `ProjectDrilldownPanel`, `ProjectProgramChannelPanel`, `WorkAreaSubnav`, `WorkBusinessSiteEmptyState`, `WorkDashboard`, `SkillGapBridgingItem`, `PerformanceExecutiveSummarySuggestions`, `XeekrsHeaderLogo`, `ReferralsHubMark`, `JobPostingCreationFlow`, `JobPostingForm`, `JobPostingSettingsDashboard`, `JobPostingQualityTab`, `JobPostingDisclosurePublicPreview`, `EmployerPendingApprovalBar`, `EmployerOnboardingLocationStep`, `ApplicationStatusModal`. |
+| 🟢 NEW | Messaging (`ChatConnectionReceivedBar`, `ClientInboundConnectionInviteCards`, `StaffConnectionRequestsManageTable`, `MessagesWorkspace`) | `components/MessagingExtras` | Inbound connection patterns + 3-rail messages workspace shell. |
+| 🟢 NEW | Admin / employer-hub / project views (`AdminConfigPanel`, `CoachboardTasksTab`, `EmployerHubBusinessSwitcher`, `EmployerHubDashboardContent`, `SiteSwitcherModal`, `ProjectOverviewShell`, `ProjectFilesShell`, `ReportsViewShell`) | `components/AdminPatterns` | All slot-based. `AdminPatternsDoc.tsx` from Xeekrs is internal docs and not ported. |
+
+### Group C — Page-suffixed templates
+
+| Status | Xeekrs item | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW | `*Page.tsx` / `*View.tsx` page-level files | `components/NamedPages` | Thin wrappers mapped onto the appropriate Atlas Route shell. Board pattern: `AccountPage`, `JobBoardPage`, `JobListingsPage`, `ProgramsPage` / `ProgramsView`, `ProjectsPage` / `ProjectsView`, `ReportsPage` / `ReportsView`, `TasksPage`, `WorkspacePage`, `MyLearnersPage`, `PeoplePage` / `PeopleView`, `ApplicantsView`, `SearchView`, `MessagesWorkspacePage`, `CareerProfilesPage`. Wizard pattern: `NewPostingPage`. Profile / Detail (title carried by hero / toolbar slot): `LearnerProfile` / `LearnerProfilePage`, `CareerProgressPage`, `ProjectFilesView`, `ProjectPlanView`, `ProjectOverview`. Mobile: `MobileNotifications`, `MobileToolkit`. |
+
+### v0.4 reconciliation policy
+
+The Xeekrs Page components are full app pages combining routing + data
+hooks + layout. Atlas Pages are layout shells only — consumers supply
+data + state via slot props. Imports continue to work
+(`import { JobBoardPage } from "@atlas/design-system"`); behavior is
+the slot-based Atlas Route shell underneath.
+
+`AdminPatternsDoc.tsx` (1,940 lines of Xeekrs-internal pattern
+documentation) is intentionally not ported — its content belongs in
+Storybook stories, not in the library surface.
+
+The 1,940-line `ProjectPlanView.tsx`, 3,313-line `ReportsView.tsx`, and
+1,220-line `NewPostingPage.tsx` are represented by their slot shells
+(`ProjectOverviewShell` / `ReportsViewShell` / `NewPostingPage`
+wizard); the consumer-app implementations remain in the Xeekrs repo
+where they belong.
+
+---
+
 ## Final state
 
-Atlas surface: **138 component folders / 446 exports** (was 87
-pre-migration; 117 after v0.2). All categories on the Xeekrs UI
-library page are now represented. Component inventory snapshot lives
-at `docs/COMPONENT-INVENTORY.json` (regenerable via
+Atlas surface: **160+ component folders / 530+ exports** (was 87
+pre-migration; 117 after v0.2; 138 after v0.3). All categories on the
+Xeekrs UI library page **and** every file in
+`Xeekrsmainapp/src/components/` (except pure internal-docs files) are
+now represented. Component inventory snapshot lives at
+`docs/COMPONENT-INVENTORY.json` (regenerable via
 `npm run docs:inventory`; CI fails on drift). Manifest is the source
 of truth for every ported item.

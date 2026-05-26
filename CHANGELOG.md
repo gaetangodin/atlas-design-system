@@ -7,6 +7,70 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.4.0] — 2026-05-26
+
+### Added — Groups A, B, C: full Xeekrs `src/components/` import
+
+Following the v0.3 work which brought in the deferred dashboards, route
+shells, and major compositions, v0.4 closes out the remaining surface
+from `Xeekrsmainapp/src/components`. Three groups:
+
+**Group A — reusable atoms & small wrappers (30+ exports across 10 files).**
+`ActionButton`, `IconButton`, `SortButton` (`SortDirection`),
+`AspectRatio`; side panels (`NotificationsPanel`, `RemindersPanel`,
+`MessagesPanel`, `RightSidebar`, `WorkspaceTakeoverPanel`); mobile
+interaction primitives (`MobileMenu`, `MobileSearch`,
+`MobileSectionTabPicker`, `SwipeHandler`, `PullToRefresh`); page-shape
+helpers (`PlaceholderPage`, `ProfileSectionCard`, `WorkPageShell`,
+`BusinessAvatarMark`); form extras (`LanguageSwitcher`,
+`AboutRoleRichTextEditor`, `ResponsibilitiesBulletEditor`,
+`SupportTicketForm`); modal extras (`SlideInModal`,
+`ResourceCreationModal`, `UnsplashImagePicker`,
+`EmployerOnboardingModal`, `JobSeekerPostingPreviewModal`,
+`JobPostingReviewRecap`); misc primitives (`CollapsibleCard`,
+`MiniMonthCalendar`, `ResponsiveTabsList`, `TabBar`).
+
+**Group B — domain composition pattern files.**
+`CaseloadPatterns` (9 staff-side compositions including `CaseloadCard`,
+`CaseloadCategoryTable`, `CaseworkerOnBehalfBar`, `ProfileQuickView`,
+`TeamMembersTable`, `LeadsScreen`, `SupportServicesBrowseTile`);
+`AcademyPatterns` (7 career-hub compositions including
+`AcademyMyLearningCards`, `CoachHubPanel`, `CareerHubCard`,
+`CareerHubProgress`, `CareerHubSidebar`, `HomeSearch`);
+`RecruitmentExtras` (20+ recruitment / work / posting surfaces including
+`RecruitmentAreaTabs`, `RecruitmentWorkspaceDestinationCards`,
+`TalentSupplyRadar`, `TasksTable`, `TaskDrilldownPanel` /
+`ProjectDrilldownPanel`, `ProjectProgramChannelPanel`,
+`WorkAreaSubnav`, `WorkBusinessSiteEmptyState`, `WorkDashboard`,
+`SkillGapBridgingItem`, `PerformanceExecutiveSummarySuggestions`,
+`XeekrsHeaderLogo`, `ReferralsHubMark`, `JobPostingCreationFlow`,
+`JobPostingForm`, `JobPostingSettingsDashboard`,
+`JobPostingQualityTab`, `JobPostingDisclosurePublicPreview`,
+`EmployerPendingApprovalBar`, `EmployerOnboardingLocationStep`,
+`ApplicationStatusModal`); `MessagingExtras`
+(`ChatConnectionReceivedBar`, `ClientInboundConnectionInviteCards`,
+`StaffConnectionRequestsManageTable`, `MessagesWorkspace`);
+`AdminPatterns` (`AdminConfigPanel`, `CoachboardTasksTab`,
+`EmployerHubBusinessSwitcher`, `EmployerHubDashboardContent`,
+`SiteSwitcherModal`, `ProjectOverviewShell`, `ProjectFilesShell`,
+`ReportsViewShell`).
+
+**Group C — Page-suffixed templates.** `NamedPages` adds Page-suffixed
+aliases for Xeekrs's `*Page.tsx` / `*View.tsx` files, mapped onto the
+appropriate Atlas Route shell: `AccountPage`, `JobBoardPage`,
+`JobListingsPage`, `ProgramsPage` / `ProgramsView`, `ProjectsPage` /
+`ProjectsView`, `ReportsPage` / `ReportsView`, `TasksPage`,
+`WorkspacePage`, `MyLearnersPage`, `PeoplePage` / `PeopleView`,
+`ApplicantsView`, `SearchView`, `MessagesWorkspacePage`,
+`CareerProfilesPage`, `NewPostingPage`, `LearnerProfile` /
+`LearnerProfilePage`, `CareerProgressPage`, `ProjectFilesView`,
+`ProjectPlanView`, `ProjectOverview`, `MobileNotifications`,
+`MobileToolkit`.
+
+The migration log in `docs/MIGRATION-CONFLICTS.md` records the new
+surface and reconciliation choices for any Xeekrs names that collide
+with v0.3 exports.
+
 ## [0.3.0] — 2026-05-26
 
 ### Added — Full Xeekrs library import (~50 components)
