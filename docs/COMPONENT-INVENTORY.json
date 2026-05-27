@@ -1,6 +1,6 @@
 {
-  "componentCount": 176,
-  "totalExports": 985,
+  "componentCount": 177,
+  "totalExports": 1006,
   "components": [
     {
       "folder": "AcademyPatterns",
@@ -560,6 +560,34 @@
       ],
       "types": [
         "CarouselProps"
+      ]
+    },
+    {
+      "folder": "CaseloadDashboards",
+      "components": [
+        "EmployerCaseloadDashboard",
+        "JobSeekers3CaseloadDashboard",
+        "EmployerNudgeModal",
+        "AllJobSeekersCard",
+        "JobSeekerListCard",
+        "AssignEmployerTakeoverPanel",
+        "CaseloadSupportAgentsPublishing",
+        "CaseworkerCandidateTools"
+      ],
+      "types": [
+        "EmployerEngagementBucket",
+        "EmployerCaseloadDashboardProps",
+        "JobSeekers3CaseloadDashboardProps",
+        "NudgeBucket",
+        "EmployerNudgeModalProps",
+        "AllJobSeekersCardProps",
+        "JobSeekerListCardRow",
+        "JobSeekerListCardProps",
+        "AssignEmployerTakeoverPanelProps",
+        "SupportAgentRow",
+        "CaseloadSupportAgentsPublishingProps",
+        "ActingOnBehalfOfContext",
+        "CaseworkerCandidateToolsProps"
       ]
     },
     {

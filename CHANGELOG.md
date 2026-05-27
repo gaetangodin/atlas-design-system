@@ -7,6 +7,58 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.6.1] — 2026-05-27
+
+### Added — caseload dashboards + missing employer / caseworker pieces
+
+Post-v0.6 audit surfaced 7 substantial files in the caseload /
+employer-caseload-dashboard / job-seekers-3-caseload-dashboard /
+caseload-bento folders that didn't have Atlas equivalents. The two
+biggest (EmployerCaseloadDashboard at 7,638 lines and
+JobSeekers3CaseloadDashboard at 8,229 lines) are the *main* caseload
+dashboards in Xeekrs. All landed as slot-based shells under
+`components/CaseloadDashboards`:
+
+`EmployerCaseloadDashboard` — top-tab employer insights dashboard
+on `CaseloadEmployersRoute`. Header strip + engagement-bucket chip
+row + KPI stats + hiring-success chart slot + main tile column +
+right rail. Engagement buckets carry tone (emerald / canary / pink /
+neutral) and counts.
+
+`JobSeekers3CaseloadDashboard` — re-exported alias of the same shell
+(the structural pattern is identical to the employer counterpart in
+Xeekrs).
+
+`EmployerNudgeModal` — caseload-scoped nudge composer. Engagement
+bucket picker + recipient summary + subject/body input slots + send
+action. Reuses the email-composer chrome from the interview-booking
+email step.
+
+`AllJobSeekersCard` — bento-style aggregator card with the
+`rounded-[32px]` chrome and hover-to-white affordance, header
+toolbar (title + metric + search + trailing action), and footer.
+
+`JobSeekerListCard` — bento list card with avatar + name + detail
+rows, optional trailing area, and a "Show N more" collapse pattern
+(threshold + initial-expanded controlled).
+
+`AssignEmployerTakeoverPanel` — single-step assign-employer modal
+mirroring the `ShareOpportunityDialog` chrome. Header + identity-card
+slot + case-assignment-fields slot + footer with Cancel / Confirm.
+
+`CaseloadSupportAgentsPublishing` — support-agent publishing strip
+with per-agent avatar + role + scope + toggle slot.
+
+`CaseworkerCandidateTools` — inline action strip rendered on
+candidate / matching-talent cards when the case manager is acting on
+behalf of a caseload employer. Renders `null` when there's no
+`ActingOnBehalfOf` context, consistent with the Xeekrs behavior.
+
+After v0.6.1, the caseload + employer-caseload / job-seekers-caseload
+dashboard surfaces from `Xeekrsmainapp/src/components/{pages,caseload}/`
+are completely represented in Atlas as slot-based shells. Inventory:
+**183 components / 1010+ exports**.
+
 ## [0.6.0] — 2026-05-27
 
 ### Added — heroui-branded, app/ layouts, lib helpers, ui/ second-pass

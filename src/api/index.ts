@@ -687,3 +687,6 @@ export * from "./hooks";
 // Layout custom-property tokens (domain layer re-export for convenience).
 export { layoutVars, layoutVar } from "../domain/tokens/layoutVars";
 export type { LayoutVarKey } from "../domain/tokens/layoutVars";
+
+// v0.6.1 — caseload dashboards + missing employer / caseworker pieces.
+export * from "./components/CaseloadDashboards";
