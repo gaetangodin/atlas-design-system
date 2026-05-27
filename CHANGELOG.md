@@ -7,6 +7,48 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.6.2] — 2026-05-27
+
+### Added — final close-out: ~30 remaining aliases + 9 new components
+
+Thorough post-v0.6.1 audit found 30 small gaps. All landed as a single
+`V062Patch` module:
+
+**New components (9):**
+- `AnnouncementDetailAdminMetaBadges` — admin-only metadata badge row
+  on announcement detail pages.
+- `CandidateContactInfoButton` — popover-revealed contact-info card
+  with LinkedIn solid mark; distinct from the generic `ContactInfoButton`.
+- `ConsentAuditLegalCard` — legal disclosure card with audit-trail entries
+  and an "Acknowledged" toggle state.
+- `CreateOrganizationStep` — slot-based create-org wizard step.
+- `EmployerInviteEmail` / `OrganizationRequestEmail` — shared
+  `EmailTemplate` shell with brand header, subject, salutation, body,
+  CTA button, sign-off, footer.
+- `EmployerWorkspaceBizSetupSteps` — numbered multi-step business
+  setup wizard with pending / active / completed statuses.
+- `JobSeekerWelcomeEntry` — two-column welcome entry card for jobseekers.
+- `WelcomeFlowGallery` — postcard-style hero gallery with auto-rotate
+  and dot indicators.
+
+**Name aliases (21):**
+- `PublicEmployerProfile` = `PublicEmployerProfileShell` (v0.5)
+- `WorkInterviewsView` = `WorkInterviewsViewShell` (v0.5)
+- `WelcomeFlow` = `WelcomeFlowShell` (v0.5)
+- `AllJobSeekers` = `AllJobSeekersCard` (v0.6.1)
+- `AlertDialog` = `AlertModal` (existing)
+- 8 `EmployerProfile*Tab` aliases → `ProfileTabSection`
+- 8 `JobSeeker3Profile*Tab` aliases → `ProfileTabSection`
+
+After v0.6.2 the migration is complete: every component file in
+`Xeekrsmainapp/src/components/`, `app/`, `features/`, `packages/xeekrs-ui/`,
+and `src/lib/` that represents library-worthy UI is reachable from
+`@atlas/design-system` under either its original Xeekrs name or a
+documented alias. Only intentionally-skipped internal sandbox-viewer
+pages, app-specific routing helpers, server-only fs scanners, and pure
+data/helper files remain in the Xeekrs repo (documented in
+`docs/MIGRATION-CONFLICTS.md`).
+
 ## [0.6.1] — 2026-05-27
 
 ### Added — caseload dashboards + missing employer / caseworker pieces

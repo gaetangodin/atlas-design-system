@@ -690,3 +690,6 @@ export type { LayoutVarKey } from "../domain/tokens/layoutVars";
 
 // v0.6.1 — caseload dashboards + missing employer / caseworker pieces.
 export * from "./components/CaseloadDashboards";
+
+// v0.6.2 — final close-out: 30 missing aliases + small new components.
+export * from "./components/V062Patch";

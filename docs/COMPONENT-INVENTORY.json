@@ -1,6 +1,6 @@
 {
-  "componentCount": 177,
-  "totalExports": 1006,
+  "componentCount": 178,
+  "totalExports": 1047,
   "components": [
     {
       "folder": "AcademyPatterns",
@@ -2198,6 +2198,54 @@
         "RecruitmentWorkSubnavHeaderProps",
         "PullToRefreshIndicatorVariant",
         "PullToRefreshIndicatorExtrasProps"
+      ]
+    },
+    {
+      "folder": "V062Patch",
+      "components": [
+        "AnnouncementDetailAdminMetaBadges",
+        "CandidateContactInfoButton",
+        "ConsentAuditLegalCard",
+        "CreateOrganizationStep",
+        "EmployerInviteEmail",
+        "OrganizationRequestEmail",
+        "EmployerWorkspaceBizSetupSteps",
+        "JobSeekerWelcomeEntry",
+        "WelcomeFlowGallery",
+        "PublicEmployerProfile",
+        "WorkInterviewsView",
+        "WelcomeFlow",
+        "AllJobSeekers",
+        "AlertDialog",
+        "EmployerProfileCandidatesTab",
+        "EmployerProfileCaseTasksTab",
+        "EmployerProfileDirectoryTab",
+        "EmployerProfileJobsTab",
+        "EmployerProfileNotesTab",
+        "EmployerProfileOverviewTab",
+        "EmployerProfilePlacementsTab",
+        "EmployerProfileRecruitmentTab",
+        "JobSeeker3ProfileCandidatesTab",
+        "JobSeeker3ProfileCaseTasksTab",
+        "JobSeeker3ProfileDirectoryTab",
+        "JobSeeker3ProfileJobsTab",
+        "JobSeeker3ProfileNotesTab",
+        "JobSeeker3ProfileOverviewTab",
+        "JobSeeker3ProfilePlacementsTab",
+        "JobSeeker3ProfileRecruitmentTab"
+      ],
+      "types": [
+        "AdminMetaBadge",
+        "AnnouncementDetailAdminMetaBadgesProps",
+        "CandidateContactInfoButtonProps",
+        "ConsentAuditLegalCardProps",
+        "CreateOrganizationStepProps",
+        "EmailTemplateProps",
+        "BizSetupStep",
+        "EmployerWorkspaceBizSetupStepsProps",
+        "JobSeekerWelcomeEntryProps",
+        "WelcomeGalleryItem",
+        "WelcomeFlowGalleryProps"
       ]
     },
     {
