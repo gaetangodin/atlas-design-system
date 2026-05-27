@@ -7,6 +7,36 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.5.1] — 2026-05-26
+
+### Added — leftover aliases discovered in post-v0.5 audit
+
+A final pass through `Xeekrsmainapp/src/components/` surfaced 10
+files that didn't yet have an Atlas alias. All landed as a single
+`V051Patch` module plus extensions to `NamedRoutes` and `NamedPages`.
+
+**Page aliases (in `NamedPages`):** `JobListingsView`, `HomePage`,
+`BrowsePage`, `JobPostingsTable` — all map onto `BoardRoute` with
+sensible default titles.
+
+**Route aliases (in `NamedRoutes`):** `AccountRoute`,
+`LeadSeekerRoute`, `CaseloadJobSeekers3Route` (board-pattern);
+`JobseekerProfileRoute`, `JobSeeker3ProfileRoute` (profile-pattern,
+title carried by hero / toolbar slot).
+
+**Domain shells (in `V051Patch`):** `BottomNavigation` (alias for
+Atlas's `BottomNav`); `PreEmploymentTraining` (slot-based training
+shell with per-module progress bars); `RecruitmentWorkSubnavHeader`
+(workspace area header sitting above `WorkAreaSubnav`);
+`PullToRefreshIndicatorExtras` (alt spinner / dots / bar / ring
+indicator variants for `PullToRefresh`).
+
+After v0.5.1, every single file in `Xeekrsmainapp/src/components/` that
+represents library-worthy UI is reachable from `@atlas/design-system`,
+either directly or through a Xeekrs-name alias. The only remaining
+unported files are the internal sandbox-viewer pages and pure
+app-data / helper modules documented in MIGRATION-CONFLICTS.md.
+
 ## [0.5.0] — 2026-05-26
 
 ### Added — full close-out of remaining Xeekrs `src/components/` subfolders

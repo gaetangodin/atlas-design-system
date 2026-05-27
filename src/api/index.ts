@@ -672,3 +672,4 @@ export * from "./components/RecruitmentWalkthrough";
 export * from "./components/ShareOpportunityDialog";
 export * from "./components/CommandPalette";
 export * from "./components/UiPrimitivesExtra";
+export * from "./components/V051Patch";

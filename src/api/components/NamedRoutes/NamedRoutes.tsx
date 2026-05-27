@@ -75,3 +75,15 @@ export const CareerProgressRoute = ProfileRoute;
 export const MobileMessagesRoute = MobileRoute;
 export const MobileNotificationsRoute = MobileRoute;
 export const MobileToolkitRoute = MobileRoute;
+
+// ───────────────────────────── v0.5.1 alias adds ────────────────────
+// Account-page board (Xeekrs `AccountRoute` is a settings index, not a
+// profile — so it maps to BoardRoute, not ProfileRoute).
+export const AccountRoute = namedBoard("Account");
+// LeadSeeker is a board-pattern caseload route.
+export const LeadSeekerRoute = namedBoard("Lead seeker");
+// Caseload (jobseeker pipeline) is board-pattern.
+export const CaseloadJobSeekers3Route = namedBoard("Caseload — Job seekers");
+// Profile routes — title carried by hero / toolbar slot.
+export const JobseekerProfileRoute = ProfileRoute;
+export const JobSeeker3ProfileRoute = ProfileRoute;

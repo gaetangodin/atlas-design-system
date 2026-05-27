@@ -38,6 +38,10 @@ function namedWizardPage(defaultTitle: string) {
 export const AccountPage = namedBoardPage("Account");
 export const JobBoardPage = namedBoardPage("Job board");
 export const JobListingsPage = namedBoardPage("Job listings");
+export const JobListingsView = namedBoardPage("Job listings");
+export const HomePage = namedBoardPage("Home");
+export const BrowsePage = namedBoardPage("Browse");
+export const JobPostingsTable = namedBoardPage("Job postings");
 export const ProgramsPage = namedBoardPage("Programs");
 export const ProgramsView = namedBoardPage("Programs");
 export const ProjectsPage = namedBoardPage("Projects");

@@ -1,6 +1,6 @@
 {
-  "componentCount": 172,
-  "totalExports": 856,
+  "componentCount": 173,
+  "totalExports": 874,
   "components": [
     {
       "folder": "AcademyPatterns",
@@ -1180,6 +1180,10 @@
         "AccountPage",
         "JobBoardPage",
         "JobListingsPage",
+        "JobListingsView",
+        "HomePage",
+        "BrowsePage",
+        "JobPostingsTable",
         "ProgramsPage",
         "ProgramsView",
         "ProjectsPage",
@@ -1244,7 +1248,12 @@
         "CareerProgressRoute",
         "MobileMessagesRoute",
         "MobileNotificationsRoute",
-        "MobileToolkitRoute"
+        "MobileToolkitRoute",
+        "AccountRoute",
+        "LeadSeekerRoute",
+        "CaseloadJobSeekers3Route",
+        "JobseekerProfileRoute",
+        "JobSeeker3ProfileRoute"
       ],
       "types": []
     },
@@ -2014,6 +2023,22 @@
       ],
       "types": [
         "UserProps"
+      ]
+    },
+    {
+      "folder": "V051Patch",
+      "components": [
+        "BottomNavigation",
+        "PreEmploymentTraining",
+        "RecruitmentWorkSubnavHeader",
+        "PullToRefreshIndicatorExtras"
+      ],
+      "types": [
+        "PreEmploymentTrainingModule",
+        "PreEmploymentTrainingProps",
+        "RecruitmentWorkSubnavHeaderProps",
+        "PullToRefreshIndicatorVariant",
+        "PullToRefreshIndicatorExtrasProps"
       ]
     },
     {
