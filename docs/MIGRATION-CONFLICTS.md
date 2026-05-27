@@ -455,9 +455,34 @@ where they belong.
 
 ---
 
+## v0.6 — heroui-branded, app/ layouts, lib helpers, ui/ second-pass
+
+| Status | Xeekrs source | Atlas destination | Notes |
+|---|---|---|---|
+| 🟢 NEW (aliases) | `src/components/heroui-branded/*` (every `BrandedX`) | `components/BrandedAliases` | Each Atlas component IS the port of the corresponding `BrandedX`; this module re-exports under the original Xeekrs names so consumers migrating from `@/components/heroui-branded` keep their imports working. |
+| 🟢 NEW | `src/components/ui/{collapsible,label,menubar,consent-scroll-table-frame,toggle-group}.tsx` | `components/UiPrimitivesExtraTwo` | Closes the remaining `ui/` primitives not covered by v0.5's UiPrimitivesExtra. |
+| 🟢 NEW | `app/layout.tsx`, `app/messages/page.tsx`, `app/work/recruitment/layout.tsx`, `app/work/job-postings/layout.tsx`, `app/announcements/layout.tsx` | `components/AppPageLayouts` | RootAppLayout, MessagesIndexLanding, WorkspaceSegmentLayout + Recruitment/Announcements/JobPostings aliases. |
+| 🟢 NEW | `src/lib/app-toast.ts` | `utilities/BrandedToasts` | `toastChatNotice`, `toastConnectionNotice`, `toastJobseekerNotice` + `TOAST_CLASS_*` constants on `sonner`. |
+| 🟢 NEW | `src/lib/employer-logo.ts` | `utilities/employerLogo` | Deterministic DiceBear shapes URL generator. |
+| 🟢 NEW | `src/components/ui/use-mobile.ts` | `hooks/useIsMobile` | First library hook, SSR-safe. |
+| 🔵 EXTEND | `src/styles/globals.css` layout custom properties (header height, sidebar rail widths, recruitment subnav, breadcrumb tabs row, fixed-header stack-top) | `domain/tokens/layoutVars` | New layout-token bundle; previous color tokens were already covered. |
+
+### Intentionally not ported in v0.6
+
+| Status | Xeekrs item | Reason |
+|---|---|---|
+| ⚪ SKIP | `src/lib/google-place-autocomplete.ts` | External Google Maps API + DOM-mounting; consumer-app concern with its own API-key config. |
+| ⚪ SKIP | `src/lib/onboardingHeroGallery.ts` | Node `fs/promises` server-only file scanner. |
+| ⚪ SKIP | `src/lib/project-program-channel-messages.ts` | App-specific data routing logic over mock thread IDs. |
+| ⚪ SKIP | `src/lib/router-compat.tsx` | Next.js routing shim; consumer-app concern. |
+| ⚪ SKIP | 30+ `app/*/page.tsx` 5-line passthroughs | Already covered by named Route exports in Atlas. |
+| ⚪ SKIP | `src/design-system/color-tokens.ts` source manifest | Documentation manifest; values already implemented in Atlas tokens. |
+
+---
+
 ## Final state
 
-Atlas surface after v0.5: **170+ component folders / 640+ exports** (was 87
+Atlas surface after v0.6: **176 component folders / 985 exports** (was 87
 pre-migration; 117 after v0.2; 138 after v0.3; 152 after v0.4). Every
 file in `Xeekrsmainapp/src/components/` — at every depth — that
 represents library-worthy UI is now in Atlas, either as a direct port,

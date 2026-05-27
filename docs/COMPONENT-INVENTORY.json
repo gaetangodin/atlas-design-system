@@ -1,6 +1,6 @@
 {
-  "componentCount": 173,
-  "totalExports": 874,
+  "componentCount": 176,
+  "totalExports": 985,
   "components": [
     {
       "folder": "AcademyPatterns",
@@ -195,6 +195,22 @@
       ]
     },
     {
+      "folder": "AppPageLayouts",
+      "components": [
+        "RootAppLayout",
+        "MessagesIndexLanding",
+        "WorkspaceSegmentLayout",
+        "RecruitmentSegmentLayout",
+        "AnnouncementsSegmentLayout",
+        "JobPostingsSegmentLayout"
+      ],
+      "types": [
+        "RootAppLayoutProps",
+        "MessagesIndexLandingProps",
+        "WorkspaceSegmentLayoutProps"
+      ]
+    },
+    {
       "folder": "AspectRatio",
       "components": [
         "AspectRatio"
@@ -322,6 +338,100 @@
       "types": [
         "BrandBoardProps"
       ]
+    },
+    {
+      "folder": "BrandedAliases",
+      "components": [
+        "BrandedAvatar",
+        "BrandedAvatarGroup",
+        "BrandedAvatarStack",
+        "BrandedBadge",
+        "BrandedDivider",
+        "BrandedSpacer",
+        "BrandedLink",
+        "BrandedImage",
+        "BrandedAvatarToned",
+        "BrandedAvatarRing",
+        "BrandedAvatarSquare",
+        "BrandedAvatarHex",
+        "BrandedGroupAvatar",
+        "BrandedIdentityPill",
+        "BrandedAvatarWithStatus",
+        "BrandedButton",
+        "BrandedCard",
+        "BrandedCardHeader",
+        "BrandedCardBody",
+        "BrandedCardFooter",
+        "BrandedHoverLiftCard",
+        "BrandedChip",
+        "BrandedInput",
+        "BrandedTextarea",
+        "BrandedSelect",
+        "BrandedSelectItem",
+        "BrandedSelectSection",
+        "BrandedAutocomplete",
+        "BrandedAutocompleteItem",
+        "BrandedAutocompleteSection",
+        "BrandedCheckbox",
+        "BrandedCheckboxGroup",
+        "BrandedForm",
+        "BrandedButtonGroup",
+        "BrandedRipple",
+        "BrandedAlert",
+        "BrandedSpinner",
+        "BrandedProgress",
+        "BrandedCircularProgress",
+        "BrandedSkeleton",
+        "BrandedPagination",
+        "BrandedBreadcrumbs",
+        "BrandedBreadcrumbItem",
+        "BrandedAccordion",
+        "BrandedAccordionItem",
+        "BrandedScrollShadow",
+        "BrandedMenu",
+        "BrandedMenuItem",
+        "BrandedMenuSection",
+        "BrandedNavbar",
+        "BrandedNavbarBrand",
+        "BrandedNavbarContent",
+        "BrandedNavbarItem",
+        "BrandedNavbarMenu",
+        "BrandedNavbarMenuItem",
+        "BrandedNavbarMenuToggle",
+        "BrandedTabs",
+        "BrandedTab",
+        "BrandedTooltip",
+        "BrandedPopover",
+        "BrandedPopoverTrigger",
+        "BrandedPopoverContent",
+        "BrandedModal",
+        "BrandedModalContent",
+        "BrandedModalHeader",
+        "BrandedModalBody",
+        "BrandedModalFooter",
+        "BrandedDateInput",
+        "BrandedDatePicker",
+        "BrandedDateRangePicker",
+        "BrandedTimeInput",
+        "BrandedCalendar",
+        "BrandedRangeCalendar",
+        "BrandedTable",
+        "BrandedTableHeader",
+        "BrandedTableColumn",
+        "BrandedTableBody",
+        "BrandedTableRow",
+        "BrandedTableCell",
+        "BrandedPostingStepper",
+        "BrandedEntryPathCard",
+        "BrandedTemplateCard",
+        "BrandedSkillTagInput",
+        "BrandedInlineAiAssist",
+        "BrandedQualityScorePanel",
+        "BrandedInternalNotesField",
+        "BrandedAiGeneratedBadge",
+        "cnHero"
+      ],
+      "types": []
     },
     {
       "folder": "BrandIcons",
@@ -2014,6 +2124,27 @@
         "NavigationMenuProps",
         "CaseloadShellTab",
         "CaseloadShellTabsProps"
+      ]
+    },
+    {
+      "folder": "UiPrimitivesExtraTwo",
+      "components": [
+        "Collapsible",
+        "Label",
+        "Menubar",
+        "ConsentScrollTableFrame",
+        "ToggleGroup"
+      ],
+      "types": [
+        "CollapsibleProps",
+        "LabelProps",
+        "MenubarItem",
+        "MenubarMenu",
+        "MenubarProps",
+        "ConsentScrollTableFrameProps",
+        "ToggleGroupOption",
+        "ToggleGroupSize",
+        "ToggleGroupProps"
       ]
     },
     {

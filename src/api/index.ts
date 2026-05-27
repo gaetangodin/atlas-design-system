@@ -673,3 +673,17 @@ export * from "./components/ShareOpportunityDialog";
 export * from "./components/CommandPalette";
 export * from "./components/UiPrimitivesExtra";
 export * from "./components/V051Patch";
+
+// ─────────────────────────────────────────────────────────────────────
+// v0.6 — heroui-branded aliases, ui/ second-pass primitives, app-layouts,
+//        lib helpers, hooks, layout tokens.
+// ─────────────────────────────────────────────────────────────────────
+export * from "./components/BrandedAliases";
+export * from "./components/UiPrimitivesExtraTwo";
+export * from "./components/AppPageLayouts";
+export * from "./utilities";
+export * from "./hooks";
+
+// Layout custom-property tokens (domain layer re-export for convenience).
+export { layoutVars, layoutVar } from "../domain/tokens/layoutVars";
+export type { LayoutVarKey } from "../domain/tokens/layoutVars";

@@ -33,3 +33,6 @@ export type { ShadowKey } from "./shadows";
 
 export { durations, easings } from "./motion";
 export type { DurationKey, EasingKey } from "./motion";
+
+export { layoutVars, layoutVar } from "./layoutVars";
+export type { LayoutVarKey } from "./layoutVars";

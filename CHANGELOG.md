@@ -7,6 +7,80 @@ SemVer.
 Anything in `contracts/` is a public surface — renaming a prop or
 removing a variant is a breaking change.
 
+## [0.6.0] — 2026-05-27
+
+### Added — heroui-branded, app/ layouts, lib helpers, ui/ second-pass
+
+A second close-out pass over sources outside `src/components/`.
+
+**`BrandedAliases` — every Xeekrs `BrandedX` name re-exported.** Atlas's
+existing components ARE the direct ports of the Xeekrs `BrandedX`
+wrappers (custom styles preserved). This module adds the original
+`BrandedX` names back as aliases so consumers migrating from
+`@/components/heroui-branded` keep their imports working without
+rewrites: `BrandedButton`, `BrandedCard`, `BrandedChip`,
+`BrandedAvatar(Toned/Ring/Square/Hex)`, `BrandedGroupAvatar`,
+`BrandedIdentityPill`, `BrandedAvatarStack`, `BrandedAvatarWithStatus`,
+`BrandedBadge`, `BrandedDivider`, `BrandedSpacer`, `BrandedLink`,
+`BrandedImage`, `BrandedInput`, `BrandedTextarea`, `BrandedSelect`,
+`BrandedAutocomplete`, `BrandedCheckbox`, `BrandedForm`,
+`BrandedAlert`, `BrandedSpinner`, `BrandedProgress`,
+`BrandedCircularProgress`, `BrandedSkeleton`, `BrandedPagination`,
+`BrandedBreadcrumbs`, `BrandedAccordion`, `BrandedScrollShadow`,
+`BrandedMenu`, `BrandedNavbar*`, `BrandedTabs`, `BrandedTooltip`,
+`BrandedPopover`, `BrandedModal*`, `BrandedDateInput`,
+`BrandedDatePicker`, `BrandedDateRangePicker`, `BrandedTimeInput`,
+`BrandedCalendar`, `BrandedRangeCalendar`, `BrandedTable*`,
+`BrandedPostingStepper`, `BrandedEntryPathCard`,
+`BrandedTemplateCard`, `BrandedSkillTagInput`,
+`BrandedInlineAiAssist`, `BrandedQualityScorePanel`,
+`BrandedInternalNotesField`, `BrandedAiGeneratedBadge`,
+`BrandedButtonGroup`, `BrandedRipple`, `BrandedHoverLiftCard`.
+
+**`UiPrimitivesExtraTwo` — second-pass `ui/` gaps.** The v0.5
+`UiPrimitivesExtra` module covered Separator, ScrollArea, HoverCard,
+ContextMenu, NavigationMenu, CaseloadShellTabs. This batch closes
+the remaining gaps: `Collapsible` (standalone disclosure), `Label`
+(standalone form label), `Menubar` / `MenubarMenu` (horizontal menu
+bar), `ConsentScrollTableFrame` (framed scrollable consent /
+disclosure container), `ToggleGroup` (segmented toggle group, sm /
+md / lg sizes, single or multiple selection).
+
+**`AppPageLayouts` — page-structure shells from app/.** Slot-based
+ports of the structural patterns in `Xeekrsmainapp/app/**`:
+`RootAppLayout` (root html/body wrapper); `MessagesIndexLanding`
+(chat landing header + touchpoints body, ports
+`app/messages/page.tsx`); `WorkspaceSegmentLayout` (generic workspace
+sub-layout with editor pass-through); `RecruitmentSegmentLayout` and
+`AnnouncementsSegmentLayout` (specialized aliases including the
+right shell class); `JobPostingsSegmentLayout` (legacy URL alias).
+
+**`utilities/` — first library utility helpers (`src/lib`).**
+- `BrandedToasts`: `toastChatNotice`, `toastConnectionNotice`,
+  `toastJobseekerNotice` + `TOAST_CLASS_*` constants on `sonner`.
+- `employerLogoUrl`: deterministic DiceBear shapes URL generator.
+
+**`hooks/` — first library hook.** `useIsMobile` SSR-safe viewport
+hook with configurable breakpoint (default 768).
+
+**Color tokens reconciled.** Audit found that `src/styles/globals.css`
++ `src/design-system/color-tokens.ts` values were already covered by
+Atlas's `tokens` object + `colorRamps.ts`. Added `layoutVars` (new
+domain token bundle) for the layout custom properties that were
+missing: `--app-header-height`, `--announcement-alert-bars-height`,
+`--app-fixed-header-stack-top`, `--recruitment-subnav-bar-height`,
+`--sidebar-rail-width-collapsed/expanded`,
+`--work-main-content-inset-left`, `--breadcrumb-tabs-row-bg`. Use
+`layoutVar(key)` to produce a `var(--token, fallback)` string.
+
+**Intentionally not ported in v0.6.** `src/lib/google-place-autocomplete.ts`
+(external API + DOM-mounting, app-specific config),
+`src/lib/onboardingHeroGallery.ts` (Node fs/promises server-only),
+`src/lib/project-program-channel-messages.ts` and
+`src/lib/router-compat.tsx` (app-specific business logic + routing
+shim), and the 30+ thin `app/*/page.tsx` files that are 5-line
+passthroughs to a Route component already aliased in Atlas.
+
 ## [0.5.1] — 2026-05-26
 
 ### Added — leftover aliases discovered in post-v0.5 audit
